@@ -1,25 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-		package="com.gearfish.medicalscanner"
-		android:installLocation="auto"
-		android:versionCode="10"
-		android:versionName="2.5">
-	<application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
-		<activity android:name="com.gearfish.medicalscanner.MedicalScanner"
-				android:launchMode="singleTop"
-				android:label="@string/app_name">
-			<intent-filter>
-				<action android:name="android.intent.action.SEARCH_LONG_PRESS" />
-				<category android:name="android.intent.category.DEFAULT" />
-				<action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.LAUNCHER" />
-			</intent-filter>
-		</activity>
-	</application>
+    package="com.gearfish.medicalscanner"
+    android:installLocation="auto"
+    android:versionCode="10"
+    android:versionName="2.5" >
 
-	<uses-permission android:name="android.permission.CAMERA" />
-	<uses-feature android:name="android.hardware.camera" />
-	<uses-feature android:name="android.hardware.camera.autofocus" />
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" 
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+                
+        <activity
+            android:name=".MainActivity"
+			android:screenOrientation="portrait" 
+			android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-	<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="16"/>
-</manifest> 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".MedicalScanner"
+            android:launchMode="singleTop" >
+        </activity>
+        
+    </application>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16" />
+
+</manifest>
