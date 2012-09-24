@@ -1,0 +1,11 @@
+*~
+jni/*
+fetch-zbar.sh
+zbar/*
+assets/*
+bin/*
+gen/*
+jni/*
+libs/*
+obj/*
+*/.*
