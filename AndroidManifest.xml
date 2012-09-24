@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-		package="trikita.obsqr"
+		package="com.gearfish.medicalscanner"
 		android:installLocation="auto"
 		android:versionCode="10"
 		android:versionName="2.5">
 	<application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
-		<activity android:name="ObsqrActivity"
+		<activity android:name="com.gearfish.medicalscanner.MedicalScanner"
 				android:launchMode="singleTop"
 				android:label="@string/app_name">
 			<intent-filter>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Obsqr</string>
+    <string name="app_name">MedicalScanner</string>
 	
 	<!-- Help prompts -->
     <string name="help_prompt_text">Tap to copy text to the clipboard</string>
