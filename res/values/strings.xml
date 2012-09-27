@@ -3,6 +3,10 @@
 
     <string name="app_name">MedicalScanner</string>
     
+    <!-- Scanner layout -->
+    <string name="goBack">Ovladaci panel.</string>
+    
+    <!-- Main activity layout -->
     <string name="startScan">proved analyzu</string>
     <string name="goToDatabase">databaze vysledku</string>
     <string name="scan_screen">Ovladaci obrazovka.</string>
