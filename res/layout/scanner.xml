@@ -17,7 +17,7 @@
 	    android:layout_alignParentBottom="true"
 	    android:layout_alignParentLeft="true"
 	    android:layout_alignParentRight="true"
-	    android:onClick="onBackPressed"
+	    android:onClick="goBack"
 	    android:text="@string/goBack" />
 	
 </RelativeLayout>

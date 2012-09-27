@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 public class Scanner extends Activity implements CameraPreview.OnQrDecodedListener { 
 	private CameraPreview mCameraPreview;
@@ -64,6 +65,10 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 		super.onBackPressed();
 		
         goBack();
+	}
+	
+	public void goBack(View view){
+		goBack();
 	}
 	
 	public void goBack() {		
