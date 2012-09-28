@@ -17,7 +17,7 @@ public class Results extends Activity {
         setContentView(R.layout.results);
         
         result_text = (TextView) findViewById(id.resultText);
-        result_text.setText("result");
+        result_text.setText(getIntent().getExtras().getCharSequence("result"));
     }
     
 	public void goBack(View view) {		
