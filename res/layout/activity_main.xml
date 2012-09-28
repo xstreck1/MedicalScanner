@@ -15,20 +15,17 @@
         android:paddingTop="15dip"
         android:gravity="center"
         android:text="@string/startScan"
-        android:textSize="20dip" />
+        android:textSize="20dip" />    
     
-    <TextView
-        android:id="@+id/textView1"
+    <ImageView
+        android:id="@+id/logoAnimation"
         android:layout_width="fill_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
-        android:textSize="32dip"
-        android:background="@drawable/ic_launcher"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:text="@string/scan_screen"
-        tools:context=".MainActivity" />
-    
+        android:src="@drawable/logo"
+        android:gravity="center" 
+        android:contentDescription="@string/logo_desc" />
+       
     <Button
         android:id="@+id/goToDatabase"
         android:layout_width="fill_parent"
@@ -40,5 +37,4 @@
         android:gravity="center"
         android:text="@string/goToDatabase"
         android:textSize="20dip" />
-
 </LinearLayout>

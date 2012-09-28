@@ -27,7 +27,10 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 	 *  @param s	string content of the code
 	 */
 	public void onQrDecoded(String result) {
-		/* return result */
+        Intent mIntent = new Intent();
+        mIntent.putExtra("result", result);
+        setResult(RESULT_OK, mIntent);
+        finish();
 	}
 
 	@Override
@@ -73,7 +76,7 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 	
 	public void goBack() {		
         Intent mIntent = new Intent();
-        setResult(RESULT_OK, mIntent);
+        setResult(RESULT_CANCELED, mIntent);
         finish();
 	}
 }

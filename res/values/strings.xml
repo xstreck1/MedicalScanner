@@ -11,6 +11,9 @@
     <string name="goToDatabase">databaze vysledku</string>
     <string name="scan_screen">Ovladaci obrazovka.</string>
     
+    <!-- Results layout -->
+    <string name="logo_desc">medi-scan</string>
+    
     <!-- Help prompts -->
     <string name="help_prompt_text">Tap to copy text to the clipboard</string>
     <string name="text_qr_type_name">Plain text</string>
