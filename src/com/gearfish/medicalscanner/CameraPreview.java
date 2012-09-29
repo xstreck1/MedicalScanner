@@ -64,6 +64,7 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback, Camera.
 		this(context, attrs, 0);
 	}
 
+	@SuppressWarnings("deprecation")
 	public CameraPreview(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		Log.d(tag, "Create CameraPreview");
@@ -250,8 +251,7 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback, Camera.
 			Log.d(tag, "Back facing camera open by default");
 			mCameraId = Camera.CameraInfo.CAMERA_FACING_BACK;
 		} else {
-			final int sdkVersion = Integer.parseInt(Build.VERSION.SDK);
-			if (sdkVersion >= Build.VERSION_CODES.GINGERBREAD) {
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
 				int cameraCount = Camera.getNumberOfCameras();
 				for (int camIdx = 0; camIdx < cameraCount; camIdx++) {
 					if (camera != null) break;

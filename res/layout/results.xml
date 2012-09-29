@@ -7,22 +7,16 @@
     <ScrollView
         android:id="@+id/resultContainer"
         android:layout_width="match_parent"
-        android:layout_height="0dp" 
-        android:layout_weight="0.5">
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="#FF339920" >
 
-        <EditText
+        <TextView
             android:id="@+id/resultText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:clickable="false" 
-        	android:cursorVisible="false" 
-        	android:focusable="false" 
-        	android:focusableInTouchMode="false" >
-
-            <requestFocus />
-        </EditText>
+            android:layout_height="wrap_content"  
+            >
+        </TextView>
 
     </ScrollView>
 
