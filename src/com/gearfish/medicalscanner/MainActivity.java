@@ -23,6 +23,7 @@ public class MainActivity extends Activity {
     	super.onWindowFocusChanged(has_focus);
     	
     	if (has_focus) {
+    		setContentView(R.layout.activity_main);
     		logo_view = (ImageView) findViewById(R.id.logoAnimation);
     		logo_anim = (AnimationDrawable) logo_view.getDrawable();
     		logo_anim.start();
@@ -33,25 +34,31 @@ public class MainActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
         
-        
+        // If the code was read and the activity was not killed for any other reason (button push), pass the value to the reader 
         if (resultCode == RESULT_OK) {
         	Intent send_to_reader = new Intent(this, Results.class);
         	send_to_reader.putExtra("result", intent.getExtras().getString("result"));
         	startActivity(send_to_reader);
         }
-        
-        /*Bundle extras = intent.getExtras();
-        if (extras.containsKey("result"))
-        	logo_view.setText(extras.getCharSequence("result"));
-        else 
-        	logo_view.setText("Nebyl nalezen subjekt.");*/
     }
     
+    /**
+     * Call for activity that is able to read the QR code.
+     * 
+     * @param view caller of this function - only the startScan button
+     */
     public void startScan(View view) {
+		setContentView(R.layout.loading);
+		
 		Intent intent = new Intent(this, Scanner.class);
 		startActivityForResult(intent, 0);
 	}
     
+    /**
+     * Call for the activity that will display older results.
+     * 
+     * @param view 
+     */
 	public void goToDatabase(View view) {
 		/* move to the database */
 	}	

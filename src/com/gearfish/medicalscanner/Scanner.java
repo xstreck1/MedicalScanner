@@ -20,7 +20,7 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 		mCameraPreview = (CameraPreview) findViewById(R.id.surface);
 		mCameraPreview.setOnQrDecodedListener(this);
 	}
-
+	
 	/**
 	 *  Called when the string is actually obtained and decoded by the CameraPreview.
 	 *  
