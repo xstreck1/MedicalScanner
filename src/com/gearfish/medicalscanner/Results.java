@@ -20,6 +20,11 @@ public class Results extends Activity {
         result_text.setText(getIntent().getExtras().getCharSequence("result"));
     }
     
+    /**
+     * Back button was pushed.
+     * 
+     * @param view button that called the function
+     */
 	public void goBack(View view) {		
         finish();
 	}	
