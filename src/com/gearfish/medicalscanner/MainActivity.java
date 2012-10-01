@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
     		logo_view = (ImageView) findViewById(R.id.logoAnimation);
     		logo_anim = (AnimationDrawable) logo_view.getDrawable();
     		logo_anim.start();
-    	}
+    	}    	
     }
 
     @Override
@@ -36,8 +36,8 @@ public class MainActivity extends Activity {
         super.onActivityResult(requestCode, resultCode, intent);
         
         // If the code was read and the activity was not killed for any other reason (button push), pass the value to the reader 
-        if (resultCode == RESULT_OK) {   		
-        	Intent send_to_reader = new Intent(this, Results.class);
+        if (resultCode == RESULT_OK) {   		    		
+        	Intent send_to_reader = new Intent(this, Processing.class);
         	send_to_reader.putExtra("result", intent.getExtras().getString("result"));
         	startActivity(send_to_reader);
         }

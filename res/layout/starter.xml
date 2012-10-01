@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="chooseCalibration"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:gravity="center"
+        android:text="@string/choose_logic"
+        android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/before_calibration_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:onClick="chooseCalibration"
+        android:text="@string/before_calibraion"
+        android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/after_calibration_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:onClick="chooseCalibration"
+        android:text="@string/after_calibraion"
+        android:textSize="40dp" />
+
+</LinearLayout>
