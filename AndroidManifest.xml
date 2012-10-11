@@ -46,10 +46,14 @@
             android:name=".Results"
             android:launchMode="singleTop" >
         </activity>
-        <activity 
+        <activity
             android:name=".Processing"
-            android:launchMode="singleTop" >           
+            android:launchMode="singleTop" >
             >
+        </activity>
+        <activity
+            android:name=".Database"
+            android:label="singleTop" >
         </activity>
     </application>
 

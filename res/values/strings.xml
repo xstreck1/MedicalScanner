@@ -21,13 +21,13 @@
 
     <!-- Loading layout -->
     <string name="loading_desc">loading</string>
-    
+
     <!-- Shared objects names -->
     <string name="calib_pref_name">calibrated</string>
-    
+
     <!-- Processing layout -->
     <string name="processing_desc">processing</string>
-    
+
     <!-- Help prompts -->
     <string name="help_prompt_text">Tap to copy text to the clipboard</string>
     <string name="text_qr_type_name">Plain text</string>
@@ -39,6 +39,6 @@
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_starter">Starter</string>
+    <string name="title_activity_starter">Medical Scanner</string>
 
 </resources>
