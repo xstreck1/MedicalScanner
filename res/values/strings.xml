@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">MedicalScanner</string>
+    <string name="title_activity_starter">Medical Scanner</string>
 
     <!-- Starting screen layout -->
     <string name="choose_logic">zvol nastaveni</string>
@@ -10,6 +11,8 @@
 
     <!-- Scanner layout -->
     <string name="goBack">Ovladaci panel.</string>
+    <string name="dlg_alert_msg">Schyba scanneru, opakujte pozadavek.</string>
+    <string name="dlg_alert_ok_btn_caption">OK</string>
 
     <!-- Main activity layout -->
     <string name="startScan">proved analyzu</string>
@@ -18,12 +21,14 @@
 
     <!-- Results layout -->
     <string name="logo_desc">medi-scan</string>
+    <string name="err_result">posledni scan nebyl platny</string>
 
     <!-- Loading layout -->
     <string name="loading_desc">loading</string>
 
     <!-- Shared objects names -->
     <string name="calib_pref_name">calibrated</string>
+    <string name="results_number">results_num</string>
 
     <!-- Processing layout -->
     <string name="processing_desc">processing</string>
@@ -34,11 +39,6 @@
     <string name="text_qr_action_name">Copy text to clipboard</string>
 
     <!-- Dialogs and alerts -->
-    <string name="dlg_alert_msg">Schyba scanneru, opakujte pozadavek.</string>
-    <string name="dlg_alert_ok_btn_caption">OK</string>
     <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_starter">Medical Scanner</string>
 
 </resources>

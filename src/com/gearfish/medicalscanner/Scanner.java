@@ -4,12 +4,16 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 
 public class Scanner extends Activity implements CameraPreview.OnQrDecodedListener { 
 	private CameraPreview mCameraPreview;
+	SharedPreferences.Editor edit;
+	SharedPreferences prefs;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -19,6 +23,9 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 		// Get access to the camera object
 		mCameraPreview = (CameraPreview) findViewById(R.id.surface);
 		mCameraPreview.setOnQrDecodedListener(this);
+		
+		prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+		edit = prefs.edit();
 	}
 	
 	/**
@@ -27,6 +34,15 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 	 *  @param s	string content of the code
 	 */
 	public void onQrDecoded(String result) {
+		// Get a current number of results or use 0 if there was a problem
+		String num_name = getString(R.string.results_number);
+		int result_num = prefs.getInt(num_name, 0) + 1;
+		
+		// Insert new result data and increase the counter
+		edit.putString(Integer.toString(result_num), result);
+		edit.putInt(num_name, result_num);
+		edit.apply();
+		
 		Intent mIntent = new Intent();
         mIntent.putExtra("result", result);
         setResult(RESULT_OK, mIntent);

@@ -1,13 +1,15 @@
 package com.gearfish.medicalscanner;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.TextView;
 
-import com.gearfish.medicalscanner.R.id;
-
 public class Results extends Activity {
+	SharedPreferences prefs;
+	
 	TextView result_text;
 	
     @Override
@@ -16,8 +18,14 @@ public class Results extends Activity {
         
         setContentView(R.layout.results);
         
-        result_text = (TextView) findViewById(id.resultText);
-        result_text.setText(getIntent().getExtras().getCharSequence("result"));
+        // Get preferences and from them the last result
+        prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+    	int result_num = prefs.getInt(getString(R.string.results_number), 0);
+    	String result = prefs.getString(Integer.toString(result_num), getString(R.string.err_result));
+        
+    	// Display the result text
+        result_text = (TextView) findViewById(R.id.resultText);
+        result_text.setText(result);
     }
     
     /**

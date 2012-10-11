@@ -20,6 +20,7 @@ public class Starter extends Activity {
     
     public void chooseCalibration(View view) {
     	edit.putBoolean(getString(R.string.calib_pref_name), (view.getId() == R.id.after_calibration_button));
+    	edit.apply();
     	startActivity(new Intent(this,MainActivity.class));
     	finish();
     }
