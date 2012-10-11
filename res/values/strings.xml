@@ -8,7 +8,11 @@
     <string name="choose_logic">zvol nastaveni</string>
     <string name="before_calibraion">pred kalibraci</string>
     <string name="after_calibraion">po kalibraci</string>
-
+    
+    <!-- Database layout -->   
+    <string name="no_res">Zadne vysledky v databazi</string>   
+    <string name="wrong_res">Vysledek scanu neni platny.</string>
+    
     <!-- Scanner layout -->
     <string name="goBack">Ovladaci panel.</string>
     <string name="dlg_alert_msg">Schyba scanneru, opakujte pozadavek.</string>
@@ -21,7 +25,7 @@
 
     <!-- Results layout -->
     <string name="logo_desc">medi-scan</string>
-    <string name="err_result">posledni scan nebyl platny</string>
+    <string name="err_result">Posledni scan nebyl platny.</string>
 
     <!-- Loading layout -->
     <string name="loading_desc">loading</string>

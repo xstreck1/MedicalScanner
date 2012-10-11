@@ -44,7 +44,6 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 		edit.apply();
 		
 		Intent mIntent = new Intent();
-        mIntent.putExtra("result", result);
         setResult(RESULT_OK, mIntent);
         
         finish();

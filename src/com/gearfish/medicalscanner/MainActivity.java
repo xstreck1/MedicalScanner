@@ -37,9 +37,8 @@ public class MainActivity extends Activity {
         
         // If the code was read and the activity was not killed for any other reason (button push), pass the value to the reader 
         if (resultCode == RESULT_OK) {   		    		
-        	Intent send_to_reader = new Intent(this, Processing.class);
-        	send_to_reader.putExtra("result", intent.getExtras().getString("result"));
-        	startActivity(send_to_reader);
+        	Intent mIntent = new Intent(this, Processing.class);
+        	startActivity(mIntent);
         }
     }
     
@@ -61,6 +60,7 @@ public class MainActivity extends Activity {
      * @param view 
      */
 	public void goToDatabase(View view) {
-		/* move to the database */
+		Intent intent = new Intent(this, Database.class);
+		startActivityForResult(intent, 0);
 	}	
 }

@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 public class Processing extends Activity {
-	final static long WAIT_TIME = 300;
+	final static long WAIT_TIME = 2500;
 	
 	Timer delay; ///< Controls length of displaying of this screen.
 	
@@ -51,10 +51,9 @@ public class Processing extends Activity {
      * After the timer ends, continue to the result screen.
      */
 	public void displayResult() {
-    	Intent send_to_reader = new Intent(this, Results.class);
-    	send_to_reader.putExtra("result", getIntent().getExtras().getString("result"));
-    	startActivity(send_to_reader);	
+    	Intent mIntent = new Intent(this, Results.class);
     	delay.cancel();
+    	startActivity(mIntent);	
     	finish();
 	}
 }
