@@ -18,5 +18,5 @@
     <item
         android:drawable="@drawable/logo2"
         android:duration="@string/logo_timing"/>
-
+    
 </animation-list>

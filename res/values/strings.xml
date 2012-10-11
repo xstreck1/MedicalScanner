@@ -24,7 +24,10 @@
     
     <!-- Shared objects names -->
     <string name="calib_pref_name">calibrated</string>
-
+    
+    <!-- Processing layout -->
+    <string name="processing_desc">processing</string>
+    
     <!-- Help prompts -->
     <string name="help_prompt_text">Tap to copy text to the clipboard</string>
     <string name="text_qr_type_name">Plain text</string>
