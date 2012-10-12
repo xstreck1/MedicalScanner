@@ -17,10 +17,11 @@ public class Results extends Activity {
         super.onCreate(result_bundle);
         
         setContentView(R.layout.results);
-        
-        // Get preferences and from them the last result
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        
+        // Get the result picked in database or use the last one if none was picked
     	int result_num = prefs.getInt(getString(R.string.results_number), 0);
+    	result_num = getIntent().getIntExtra(getString(R.string.result_choice), result_num);
     	String result = prefs.getString(Integer.toString(result_num), getString(R.string.err_result));
         
     	// Display the result text

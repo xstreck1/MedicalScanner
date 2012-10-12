@@ -33,6 +33,7 @@
     <!-- Shared objects names -->
     <string name="calib_pref_name">calibrated</string>
     <string name="results_number">results_num</string>
+    <string name="result_choice">results_choice</string>    
 
     <!-- Processing layout -->
     <string name="processing_desc">processing</string>
