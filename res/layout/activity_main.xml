@@ -8,13 +8,9 @@
         android:id="@+id/startScan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dip"
         android:onClick="startScan"
-        android:paddingBottom="15dip"
-        android:paddingTop="15dip"
         android:gravity="center"
-        android:text="@string/startScan"
-        android:textSize="20dip" />    
+        android:text="@string/startScan" />    
     
     <ImageView
         android:id="@+id/logoAnimation"
@@ -29,11 +25,7 @@
         android:id="@+id/goToDatabase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dip"
         android:onClick="goToDatabase"
-        android:paddingBottom="15dip"
-        android:paddingTop="15dip"
         android:gravity="center"
-        android:text="@string/goToDatabase"
-        android:textSize="20dip" />
+        android:text="@string/goToDatabase" />
 </LinearLayout>

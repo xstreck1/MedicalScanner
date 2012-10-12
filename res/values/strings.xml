@@ -26,6 +26,7 @@
     <!-- Results layout -->
     <string name="logo_desc">medi-scan</string>
     <string name="err_result">Posledni scan nebyl platny.</string>
+    <string name="err_data">Zpracovani dat selhalo.</string>   
 
     <!-- Loading layout -->
     <string name="loading_desc">loading</string>

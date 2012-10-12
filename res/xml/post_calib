@@ -1,7 +1,17 @@
 <RESULTS>
-	<RESULT key="Exarcha" >
-	   <NAME>Kane</NAME>
-	   <RACE>Exarcha</RACE>
+	<RESULT key="Martusak" >
+	   <NAME>Marusak</NAME>
+	   <RACE>Clovek</RACE>
 	   <HEALT>Vase DNA uz neobsahuje skoro nic...</HEALT>
+	</RESULT>
+	<RESULT key="Purger" >
+	   <NAME>Purger</NAME>
+	   <RACE>Zombie</RACE>
+	   <HEALT>Dostatek alkoholu.</HEALT>
+	</RESULT>
+	<RESULT key="Adam" >
+	   <NAME>Adam</NAME>
+	   <RACE>Primat</RACE>
+	   <HEALT>Stale etekovano nadmerne ochlupeni.</HEALT>
 	</RESULT>
 </RESULTS>
