@@ -6,6 +6,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	private ImageView logo_view;
@@ -15,7 +16,7 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);  
     }
     
     @Override
@@ -24,6 +25,8 @@ public class MainActivity extends Activity {
     	
     	if (has_focus) {
     		setContentView(R.layout.activity_main);
+    		
+    		((TextView) findViewById(R.id.battery)).setText(String.valueOf(BatteryReciever.value) + "%");    	
     		
     		logo_view = (ImageView) findViewById(R.id.logoAnimation);
     		logo_anim = (AnimationDrawable) logo_view.getDrawable();
@@ -49,6 +52,7 @@ public class MainActivity extends Activity {
      */
     public void startScan(View view) {
 		setContentView(R.layout.loading);
+		((TextView) findViewById(R.id.battery)).setText(String.valueOf(BatteryReciever.value) + "%");   
 		
 		Intent intent = new Intent(this, Scanner.class);
 		startActivityForResult(intent, 0);

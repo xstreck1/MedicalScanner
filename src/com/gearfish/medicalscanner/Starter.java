@@ -2,6 +2,7 @@ package com.gearfish.medicalscanner;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -16,6 +17,9 @@ public class Starter extends Activity {
         setContentView(R.layout.starter);
         
         edit = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit();
+        
+	    IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+	    registerReceiver(new BatteryReciever(), filter);
     }
     
     public void chooseCalibration(View view) {

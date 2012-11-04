@@ -4,6 +4,8 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
+    <include layout="@layout/battery"/>
+    
     <Button
         android:id="@+id/startScan"
         android:layout_width="match_parent"

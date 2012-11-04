@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Processing extends Activity {
 	final static long WAIT_TIME = 2500;
@@ -20,10 +21,12 @@ public class Processing extends Activity {
         
         setContentView(R.layout.processing);
     }
-    
+
 	@Override
 	public void onResume() {
 		super.onResume();
+		
+		((TextView) findViewById(R.id.battery)).setText(String.valueOf(BatteryReciever.value) + "%");   
 		
 		// Start timer for processing animation
 		delay = new Timer();

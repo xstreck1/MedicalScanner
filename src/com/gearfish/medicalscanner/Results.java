@@ -33,6 +33,13 @@ public class Results extends Activity {
         result_text.setText(value);
     }
     
+    @Override
+    public void onResume() {
+		super.onResume();
+		
+		((TextView) findViewById(R.id.battery)).setText(String.valueOf(BatteryReciever.value) + "%");   
+    }
+    
     String getData(final String key) {
     	String value = getString(R.string.err_data);
     	

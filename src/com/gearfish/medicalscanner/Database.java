@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class Database extends ListActivity {
 	ListAdapter results;
@@ -25,6 +26,13 @@ public class Database extends ListActivity {
         
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, results_list));
         setContentView(R.layout.database);			
+    }
+    
+    @Override
+    public void onResume() {
+		super.onResume();
+		
+		((TextView) findViewById(R.id.battery)).setText(String.valueOf(BatteryReciever.value) + "%");   
     }
     
     /**

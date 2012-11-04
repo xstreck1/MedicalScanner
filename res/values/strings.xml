@@ -38,12 +38,11 @@
 
     <!-- Processing layout -->
     <string name="processing_desc">processing</string>
-
-    <!-- Help prompts -->
-    <string name="help_prompt_text">Tap to copy text to the clipboard</string>
-    <string name="text_qr_type_name">Plain text</string>
-    <string name="text_qr_action_name">Copy text to clipboard</string>
-
+    
+    <!-- Battery layout -->
+    <string name="battery_desc">battery power</string>
+    <string name="battery_start">100%</string>
+    
     <!-- Dialogs and alerts -->
     <string name="menu_settings">Settings</string>
 
