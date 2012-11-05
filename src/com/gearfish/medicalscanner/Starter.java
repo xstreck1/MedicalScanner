@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
+import android.widget.EditText;
 
 public class Starter extends Activity {
 	SharedPreferences.Editor edit;
@@ -17,14 +18,19 @@ public class Starter extends Activity {
         setContentView(R.layout.starter);
         
         edit = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit();
-        
-	    IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-	    registerReceiver(new BatteryReciever(), filter);
     }
     
     public void chooseCalibration(View view) {
     	edit.putBoolean(getString(R.string.calib_pref_name), (view.getId() == R.id.after_calibration_button));
     	edit.apply();
+    	
+    	String time_string = (((EditText)findViewById(R.id.timingField)).getText()).toString();
+    	if (Integer.valueOf(time_string) <= 0)
+    		finish();
+
+	    IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+	    registerReceiver(new BatteryReciever(Integer.valueOf(time_string)), filter);
+    	
     	startActivity(new Intent(this,MainActivity.class));
     	finish();
     }

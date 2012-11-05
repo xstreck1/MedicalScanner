@@ -6,6 +6,4 @@
     android:contentDescription="@string/battery_desc"
     android:drawableRight="@drawable/battery"
     android:text="@string/battery_start"
-     >
-    
-</TextView>
+    />

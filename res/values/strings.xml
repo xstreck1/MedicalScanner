@@ -5,7 +5,9 @@
     <string name="title_activity_starter">Medical Scanner</string>
 
     <!-- Starting screen layout -->
-    <string name="choose_logic">zvol nastaveni</string>
+    <string name="choose_time">zadej dobu fungovani scanneru v minutach</string>  
+    <string name="basic_timing">120</string>  
+    <string name="choose_database">zvol nastaveni (obsah) databaze</string>
     <string name="before_calibraion">pred kalibraci</string>
     <string name="after_calibraion">po kalibraci</string>
     
@@ -43,7 +45,9 @@
     <string name="battery_desc">battery power</string>
     <string name="battery_start">100%</string>
     
-    <!-- Dialogs and alerts -->
-    <string name="menu_settings">Settings</string>
+    <!-- Battery out layout -->
+    <string name="low_battery">Baterie scanneru vycerpana. \n\n Dobijte prosim baterii pro dalsi pouziti.</string>
 
+    <!-- Other necessary values -->
+    <string name="menu_settings">Settings</string>
 </resources>

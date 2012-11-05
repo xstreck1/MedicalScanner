@@ -37,7 +37,11 @@ public class Results extends Activity {
     public void onResume() {
 		super.onResume();
 		
-		((TextView) findViewById(R.id.battery)).setText(String.valueOf(BatteryReciever.value) + "%");   
+		int battery = BatteryReciever.value;
+		if (battery <= 0)
+			setContentView(R.layout.battery_out);
+		else
+			((TextView) findViewById(R.id.battery)).setText(String.valueOf(battery) + "%");     
     }
     
     String getData(final String key) {

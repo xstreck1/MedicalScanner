@@ -24,13 +24,18 @@ public class MainActivity extends Activity {
     	super.onWindowFocusChanged(has_focus);
     	
     	if (has_focus) {
-    		setContentView(R.layout.activity_main);
-    		
-    		((TextView) findViewById(R.id.battery)).setText(String.valueOf(BatteryReciever.value) + "%");    	
-    		
-    		logo_view = (ImageView) findViewById(R.id.logoAnimation);
-    		logo_anim = (AnimationDrawable) logo_view.getDrawable();
-    		logo_anim.start();
+    		int battery = BatteryReciever.value;
+    		if (battery <= 0)
+    			setContentView(R.layout.battery_out);
+    		else {
+	    		setContentView(R.layout.activity_main);
+	    			
+	    		((TextView) findViewById(R.id.battery)).setText(String.valueOf(battery) + "%");    	
+	    		
+	    		logo_view = (ImageView) findViewById(R.id.logoAnimation);
+	    		logo_anim = (AnimationDrawable) logo_view.getDrawable();
+	    		logo_anim.start();
+    		}
     	}    	
     }
 
