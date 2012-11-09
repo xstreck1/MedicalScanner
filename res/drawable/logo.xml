@@ -12,11 +12,11 @@
         android:duration="@string/logo_timing"/>
 
     <item
-        android:drawable="@drawable/logo3"
+        android:drawable="@drawable/logo1"
         android:duration="@string/logo_timing"/>
     
     <item
-        android:drawable="@drawable/logo2"
+        android:drawable="@drawable/logo3"
         android:duration="@string/logo_timing"/>
     
 </animation-list>

@@ -2,32 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/main_bg" >
 
     <include layout="@layout/battery"/>
     
-    <Button
+    <ImageView
+        android:id="@+id/logoAnimation"
+        android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:gravity="center" 
+        android:contentDescription="@string/logo_desc" />
+    
+    <ImageView
         android:id="@+id/startScan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="startScan"
-        android:gravity="center"
-        android:text="@string/startScan" />    
-    
-    <ImageView
-        android:id="@+id/logoAnimation"
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:src="@drawable/logo"
-        android:gravity="center" 
-        android:contentDescription="@string/logo_desc" />
+        android:src="@drawable/scan_bn"
+        android:contentDescription="@string/startScan" />    
        
-    <Button
+    <ImageView
         android:id="@+id/goToDatabase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="goToDatabase"
-        android:gravity="center"
-        android:text="@string/goToDatabase" />
+        android:src="@drawable/database_bn"
+        android:contentDescription="@string/goToDatabase" />
+    
 </LinearLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="logo_timing">500</string>
+    <string name="logo_timing">700</string>
     <string name="processing_timing">100</string>
     
 </resources>
