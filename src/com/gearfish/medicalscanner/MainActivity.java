@@ -6,7 +6,6 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	private ImageView logo_view;
@@ -68,7 +67,21 @@ public class MainActivity extends Activity {
      */
     public void startScan(View view) {
 		setContentView(R.layout.loading);
-		((TextView) findViewById(R.id.battery)).setText(String.valueOf(BatteryReciever.value) + "%");   
+		
+		int battery = BatteryReciever.value;
+		
+		if (battery >= 75)
+			((ImageView) findViewById(R.id.battery))
+					.setImageResource(R.drawable.battery_01);
+		else if (battery >= 50)
+			((ImageView) findViewById(R.id.battery))
+					.setImageResource(R.drawable.battery_02);
+		else if (battery >= 25)
+			((ImageView) findViewById(R.id.battery))
+					.setImageResource(R.drawable.battery_03);
+		else
+			((ImageView) findViewById(R.id.battery))
+					.setImageResource(R.drawable.battery_04);	
 		
 		Intent intent = new Intent(this, Scanner.class);
 		startActivityForResult(intent, 0);

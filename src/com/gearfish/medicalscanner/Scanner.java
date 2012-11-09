@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
 public class Scanner extends Activity implements CameraPreview.OnQrDecodedListener { 
 	private CameraPreview mCameraPreview;
@@ -68,6 +69,24 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 			AlertDialog alert = builder.create();	
 			alert.show();
 			return;
+		}
+		
+		int battery = BatteryReciever.value;
+		if (battery <= 0)
+			setContentView(R.layout.battery_out);
+		else {
+			if (battery >= 75)
+				((ImageView) findViewById(R.id.battery))
+						.setImageResource(R.drawable.battery_01);
+			else if (battery >= 50)
+				((ImageView) findViewById(R.id.battery))
+						.setImageResource(R.drawable.battery_02);
+			else if (battery >= 25)
+				((ImageView) findViewById(R.id.battery))
+						.setImageResource(R.drawable.battery_03);
+			else
+				((ImageView) findViewById(R.id.battery))
+						.setImageResource(R.drawable.battery_04);
 		}
 	}
 

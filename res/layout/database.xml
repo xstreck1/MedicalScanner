@@ -15,11 +15,12 @@
         android:drawSelectorOnTop="false" >
     </ListView>
 
-    <Button
+    <ImageView
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="goBack"
-        android:text="@string/goBack" />
+        android:src="@drawable/button_back"
+        android:contentDescription="@string/goBack" />
 
 </LinearLayout>

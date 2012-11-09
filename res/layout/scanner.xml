@@ -4,21 +4,23 @@
     android:layout_height="fill_parent"
     android:onClick="goBack"
     android:orientation="vertical" >
-	
+ 	
 	<com.gearfish.medicalscanner.CameraPreview
 	    android:id="@+id/surface"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent" />
 
-	<Button
-	    android:id="@+id/button1"
+    <include layout="@layout/battery"/>	
+	
+	<ImageView
+	    android:id="@+id/goBackFromScan"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_alignParentBottom="true"
 	    android:layout_alignParentLeft="true"
-	    android:layout_alignParentRight="true"
+	    android:contentDescription="@string/goBack"
 	    android:onClick="goBack"
-	    android:text="@string/goBack" />
+	    android:src="@drawable/button_back" />
 	
 </RelativeLayout>
 
