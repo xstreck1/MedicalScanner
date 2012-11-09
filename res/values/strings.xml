@@ -12,6 +12,7 @@
     <string name="after_calibraion">po kalibraci</string>
     
     <!-- Database layout -->   
+    <string name="database_filler">Predchozi vysledky.</string>
     <string name="no_res">Zadne vysledky v databazi</string>   
     <string name="wrong_res">Vysledek scanu neni platny.</string>
     
@@ -26,6 +27,7 @@
     <string name="scan_screen">Ovladaci obrazovka.</string>
 
     <!-- Results layout -->
+    <string name="results_filler">Vysledek scanu.</string>
     <string name="logo_desc">medi-scan</string>
     <string name="err_result">Posledni scan nebyl platny.</string>
     <string name="err_data">Zpracovani dat selhalo.</string>   

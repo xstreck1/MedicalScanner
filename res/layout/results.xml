@@ -6,6 +6,13 @@
     android:background="@drawable/main_bg" >
 
     <include layout="@layout/battery"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/filler" 
+        android:contentDescription="@string/results_filler"/>
     
     <ScrollView
         android:id="@+id/resultContainer"
@@ -25,10 +32,10 @@
     <ImageView
         android:id="@+id/resultLogo"
         android:layout_width="match_parent"
-        android:layout_height="0dp" 
+        android:layout_height="0dp"
         android:layout_weight="0.5"
-        android:src="@drawable/ic_launcher" 
-        android:contentDescription="@string/logo_desc"/>
+        android:contentDescription="@string/logo_desc"
+        android:src="@drawable/genetics" />
 
     <ImageView
         android:id="@+id/backButton"

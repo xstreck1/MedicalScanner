@@ -6,6 +6,13 @@
     android:background="@drawable/main_bg" >
 
     <include layout="@layout/battery"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/filler" 
+        android:contentDescription="@string/database_filler"/>
     
     <ListView
         android:id="@android:id/list"
@@ -19,8 +26,9 @@
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="3pt"
+        android:contentDescription="@string/goBack"
         android:onClick="goBack"
-        android:src="@drawable/button_back"
-        android:contentDescription="@string/goBack" />
+        android:src="@drawable/button_back" />
 
 </LinearLayout>
