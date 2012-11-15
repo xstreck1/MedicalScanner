@@ -4,19 +4,25 @@
     android:oneshot="false" >
 
     <item
-        android:drawable="@drawable/logo1"
-        android:duration="@string/logo_timing"/>
-
-    <item
         android:drawable="@drawable/logo2"
         android:duration="@string/logo_timing"/>
 
     <item
-        android:drawable="@drawable/logo1"
+        android:drawable="@drawable/logo3"
+        android:duration="@string/logo_timing"/>
+
+    <item
+        android:drawable="@drawable/logo4"
         android:duration="@string/logo_timing"/>
     
     <item
-        android:drawable="@drawable/logo3"
+        android:drawable="@drawable/logo5"
         android:duration="@string/logo_timing"/>
-    
+
+    <item
+        android:drawable="@drawable/logo6"
+        android:duration="@string/logo_timing"/>
+    <item
+        android:drawable="@drawable/logo7"
+        android:duration="@string/logo_timing"/>
 </animation-list>

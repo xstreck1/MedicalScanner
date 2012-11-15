@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="logo_timing">700</string>
+    <string name="logo_timing">650</string>
     <string name="processing_timing">100</string>
     <color name="font_color">#00f1b8</color>
     <dimen name="font_size">10pt</dimen>
