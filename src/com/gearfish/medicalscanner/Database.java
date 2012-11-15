@@ -24,7 +24,7 @@ public class Database extends ListActivity {
         
         createResultsList();
         
-        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, results_list));
+        setListAdapter(new ArrayAdapter<String>(this, R.layout.my_list_item, results_list));
         setContentView(R.layout.database);			
     }
     
@@ -63,7 +63,10 @@ public class Database extends ListActivity {
     		results_list = new String [result_num];
     		int string_num = 0;
     		for (int i = result_num; i > 0; i--, string_num++) {
-    			results_list[string_num] = Integer.toString(string_num + 1) + ". "; 
+    			if (string_num + 1 < 10) results_list[string_num] = "00";
+    			else if (string_num + 1 < 100) results_list[string_num] = "0";
+    			else results_list[string_num] = "";
+    			results_list[string_num] += Integer.toString(string_num + 1) + "   "; 
     			results_list[string_num] += prefs.getString(Integer.toString(i), getString(R.string.wrong_res));
     		}
     	} 
