@@ -4,11 +4,26 @@
     android:oneshot="false" >
 
     <item
-        android:drawable="@drawable/processing1"
+        android:drawable="@drawable/processing2"
         android:duration="@string/processing_timing"/>
 
     <item
-        android:drawable="@drawable/processing2"
+        android:drawable="@drawable/processing3"
         android:duration="@string/processing_timing"/>
-    
+
+    <item
+        android:drawable="@drawable/processing4"
+        android:duration="@string/processing_timing"/>
+
+    <item
+        android:drawable="@drawable/processing5"
+        android:duration="@string/processing_timing"/>
+
+    <item
+        android:drawable="@drawable/processing6"
+        android:duration="@string/processing_timing"/>
+
+    <item
+        android:drawable="@drawable/processing7"
+        android:duration="@string/processing_timing"/>
 </animation-list>
