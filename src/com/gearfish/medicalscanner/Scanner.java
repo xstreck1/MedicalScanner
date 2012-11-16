@@ -1,8 +1,8 @@
 package com.gearfish.medicalscanner;
 
+import org.xmlpull.v1.XmlPullParser;
+
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,6 +15,10 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 	private CameraPreview mCameraPreview;
 	SharedPreferences.Editor edit;
 	SharedPreferences prefs;
+	
+	final int WAIT = 500; // Time to wait between two camera acquisitions
+	
+	XmlPullParser xpp; // Parser used for XML file database of strings
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -25,8 +29,37 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 		mCameraPreview = (CameraPreview) findViewById(R.id.surface);
 		mCameraPreview.setOnQrDecodedListener(this);
 		
+		// Get the preferences
 		prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 		edit = prefs.edit();
+		
+		// Get the parser
+		if (prefs.getBoolean(getString(R.string.calib_pref_name), false))
+			xpp = getResources().getXml(R.xml.post_calib);
+		else
+			xpp = getResources().getXml(R.xml.pre_calib);
+	}
+	
+	/**
+	 * This function goes through the database and checks whether the string is contained within it.
+	 *
+	 * @param scanned	string that has been obtained from the QR code
+	 * 
+	 * @return true if the string is a result, false otherwise
+	 */
+	private boolean isResult(String scanned) {	    	
+		try {
+			while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
+				if (xpp.getEventType() == XmlPullParser.START_TAG)
+					if (xpp.getName().equals("RESULT")) 
+						if (xpp.getAttributeValue(0).equals(scanned)) 
+							return true;
+				xpp.next();
+			}
+		} catch (Throwable t) {
+    		t.printStackTrace();
+    	}
+		return false;
 	}
 	
 	/**
@@ -35,6 +68,9 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 	 *  @param s	string content of the code
 	 */
 	public void onQrDecoded(String result) {
+		if (!isResult(result))
+			return;
+		
 		// Get a current number of results or use 0 if there was a problem
 		String num_name = getString(R.string.results_number);
 		int result_num = prefs.getInt(num_name, 0) + 1;
@@ -55,20 +91,16 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 		super.onResume();
 		Log.d(getComponentName().flattenToShortString(), "onResume()");
 		
-		// Try to get the camera - if you fail, alert the user 
-		if (!mCameraPreview.acquireCamera(getWindowManager().getDefaultDisplay().getRotation())) {
-			AlertDialog.Builder builder = new AlertDialog.Builder(this);
-			builder.setMessage(getResources().getString(R.string.dlg_alert_msg)).setCancelable(false)
-				   .setPositiveButton(getResources().getString(R.string.dlg_alert_ok_btn_caption),
-					new DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface dialog, int id) {
-							Scanner.this.finish();
-							dialog.dismiss();
-						}
-				   });
-			AlertDialog alert = builder.create();	
-			alert.show();
-			return;
+		// Try to get the camera - if you fail, end building the application
+		while (!mCameraPreview.acquireCamera(getWindowManager().getDefaultDisplay().getRotation())) {
+			try {
+				Thread.sleep(WAIT);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				goBack();
+				return;
+			}
 		}
 		
 		int battery = BatteryReciever.value;

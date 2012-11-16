@@ -22,6 +22,11 @@ public class Starter extends Activity {
     }
     
     public void chooseCalibration(View view) {
+    	// Erase previous measurements
+    	edit.clear();
+    	edit.apply();
+    	
+    	// Set new preference
     	edit.putBoolean(getString(R.string.calib_pref_name), (view.getId() == R.id.after_calibration_button));
     	edit.apply();
     	

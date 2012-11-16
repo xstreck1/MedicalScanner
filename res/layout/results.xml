@@ -48,7 +48,7 @@
         android:layout_weight="0.0"
         android:contentDescription="@string/additional_text"
         android:scaleType="fitStart"
-        android:src="@drawable/results2" />
+        android:src="@drawable/results2a" />
 
     <ImageView
         android:id="@+id/backButton"

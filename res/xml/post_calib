@@ -6,12 +6,12 @@
 	</RESULT>
 	<RESULT key="Purger" >
 	   <NAME>Purger</NAME>
-	   <RACE>Zombie</RACE>
+	   <RACE>Zombie Nepritel</RACE>
 	   <HEALT>Dostatek alkoholu.</HEALT>
 	</RESULT>
 	<RESULT key="Adam" >
 	   <NAME>Adam</NAME>
 	   <RACE>Primat</RACE>
-	   <HEALT>Stale etekovano nadmerne ochlupeni.</HEALT>
+	   <HEALT>Stale detekovano nadm-nePritelerne ochlupeni.</HEALT>
 	</RESULT>
 </RESULTS>

@@ -15,6 +15,8 @@ public class Results extends Activity {
 	SharedPreferences prefs;
 	
 	TextView result_text;
+	enum Pic_type {human, enemy, error};
+	Pic_type my_pic;
 	
     @Override
     public void onCreate(Bundle result_bundle) {
@@ -29,9 +31,16 @@ public class Results extends Activity {
     	String key = prefs.getString(Integer.toString(result_num), getString(R.string.err_result));
     	String value = getData(key);
         
+    	// Control presence of the "nepritel" string
+    	my_pic = Pic_type.human;
+    	if (value.replaceAll("\\s", " ").matches(".*[Nn][Ee][Pp][Rr][Ii][Tt][Ee][Ll].*"))
+    		my_pic = Pic_type.enemy;
+    	else if (value.matches(getString(R.string.err_data)))
+    		my_pic = Pic_type.error;
+    	
     	// Display the result text
         result_text = (TextView) findViewById(R.id.resultText);
-        result_text.setText(value);
+        result_text.setText(value);   	        	
     }
     
     @Override
@@ -51,6 +60,13 @@ public class Results extends Activity {
 			else
 				((ImageView) findViewById(R.id.battery)).setImageResource(R.drawable.battery_04);
 		}    
+		
+		if (my_pic == Pic_type.human)
+			((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2a);
+		else if (my_pic == Pic_type.enemy)
+        	((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2b);
+        else
+        	((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2c);
     }
     
     String getData(final String key) {

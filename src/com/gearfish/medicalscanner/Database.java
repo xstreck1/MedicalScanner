@@ -45,7 +45,7 @@ public class Database extends ListActivity {
 				((ImageView) findViewById(R.id.battery)).setImageResource(R.drawable.battery_04);
 		}
     }
-    
+	
     /**
      * Read from the shared preferences all the data that has been read up till know and display them.
      * Ordering of the data is from the newest to the oldest.
@@ -82,6 +82,10 @@ public class Database extends ListActivity {
 	}	
 	
 	public void onListItemClick(ListView parent, View v, int position, long id) {
+		// Check if there is any result, otherwise ban the output as a whole
+		if (prefs.getInt(getString(R.string.results_number), 0) == 0)
+			return;
+		
     	Intent mIntent = new Intent(this, Results.class);
     	// Fill in value of reordered position
     	int results_num = prefs.getInt(getString(R.string.results_number), 0);

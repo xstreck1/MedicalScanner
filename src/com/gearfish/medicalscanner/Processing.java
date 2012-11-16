@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 public class Processing extends Activity {
-	final static long WAIT_TIME = 5000;
+	final static long WAIT_TIME = 5000; // 5 secs of loading
 	
 	Timer delay; ///< Controls length of displaying of this screen.
 	
