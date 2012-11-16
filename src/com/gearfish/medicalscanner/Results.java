@@ -59,14 +59,14 @@ public class Results extends Activity {
 				((ImageView) findViewById(R.id.battery)).setImageResource(R.drawable.battery_03);
 			else
 				((ImageView) findViewById(R.id.battery)).setImageResource(R.drawable.battery_04);
+			
+			if (my_pic == Pic_type.human)
+				((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2a);
+			else if (my_pic == Pic_type.enemy)
+	        	((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2b);
+	        else
+	        	((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2c);
 		}    
-		
-		if (my_pic == Pic_type.human)
-			((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2a);
-		else if (my_pic == Pic_type.enemy)
-        	((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2b);
-        else
-        	((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2c);
     }
     
     String getData(final String key) {
