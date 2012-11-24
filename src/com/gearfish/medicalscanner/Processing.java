@@ -9,10 +9,17 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+/**
+ * This class is responsible for the mere processing animation. The animation is
+ * timed and after the time runs out, a result string is displayed.
+ * 
+ * @author punyone
+ * 
+ */
 public class Processing extends Activity {
-    final static long WAIT_TIME = 5000; // 5 secs of loading
-
-    Timer delay; // /< Controls length of displaying of this screen.
+    private final static long WAIT_TIME = 5000; // Number of seconds (5) of the loading
+					// animation.
+    private Timer delay; // Controls length of displaying of this screen.
 
     @Override
     public void onCreate(Bundle result_bundle) {
@@ -25,7 +32,7 @@ public class Processing extends Activity {
     public void onResume() {
 	super.onResume();
 	Battery.setActivity(this);
-	
+
 	// Start timer for processing animation
 	delay = new Timer();
 	delay.schedule(new TimerTask() {
@@ -40,7 +47,7 @@ public class Processing extends Activity {
     public void onWindowFocusChanged(boolean has_focus) {
 	super.onWindowFocusChanged(has_focus);
 
-	// Ran the animation
+	// Run the animation (safely).
 	if (has_focus) {
 	    ImageView anim_view = (ImageView) findViewById(R.id.processingAnimation);
 	    if (anim_view == null)
@@ -55,9 +62,8 @@ public class Processing extends Activity {
     /**
      * After the timer ends, continue to the result screen.
      */
-    public void displayResult() {
+    private void displayResult() {
 	Intent mIntent = new Intent(this, Results.class);
-	delay.cancel();
 	startActivity(mIntent);
 	finish();
     }

@@ -17,10 +17,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * This class is taken from the original project.
+ * A simple wrapper around a Camera and a SurfaceView that renders a centered
+ * preview of the Camera to the surface. Also provided autofocus effect.
  * 
- * A simple wrapper around a Camera and a SurfaceView that renders a centered preview of the Camera
- * to the surface. Also provided autofocus effect.
+ * This class is taken from the original project OBSQR by Anna Kruglik and Serge
+ * Zaitsev. See
+ * https://play.google.com/store/apps/details?id=trikita.obsqr&hl=en for
+ * details.
+ * 
  */
 class CameraPreview extends ViewGroup implements SurfaceHolder.Callback, Camera.AutoFocusCallback, Camera.PreviewCallback {
 
