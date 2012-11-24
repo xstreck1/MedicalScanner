@@ -24,17 +24,16 @@ public class Processing extends Activity {
     @Override
     public void onResume() {
 	super.onResume();
-
-	if (Battery.setActivity(this)) {
-	    // Start timer for processing animation
-	    delay = new Timer();
-	    delay.schedule(new TimerTask() {
-		@Override
-		public void run() {
-		    displayResult();
-		}
-	    }, WAIT_TIME);
-	}
+	Battery.setActivity(this);
+	
+	// Start timer for processing animation
+	delay = new Timer();
+	delay.schedule(new TimerTask() {
+	    @Override
+	    public void run() {
+		displayResult();
+	    }
+	}, WAIT_TIME);
     }
 
     @Override
@@ -44,7 +43,11 @@ public class Processing extends Activity {
 	// Ran the animation
 	if (has_focus) {
 	    ImageView anim_view = (ImageView) findViewById(R.id.processingAnimation);
+	    if (anim_view == null)
+		return;
 	    AnimationDrawable animation = (AnimationDrawable) anim_view.getDrawable();
+	    if (animation == null)
+		return;
 	    animation.start();
 	}
     }

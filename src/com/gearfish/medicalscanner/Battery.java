@@ -22,7 +22,7 @@ import android.widget.ImageView;
  * @author punyone
  * 
  */
-public class Battery extends BroadcastReceiver {
+class Battery extends BroadcastReceiver {
     private final static int SECOND = 1000;
     private final static int SECONDS_PER_MINUTE = 60;
 
@@ -67,7 +67,7 @@ public class Battery extends BroadcastReceiver {
     /**
      * Schedules updates.
      */
-    Timer minuter = new Timer();
+    static Timer minuter = new Timer();
 
     /**
      * Set times and start first counting.
@@ -130,6 +130,7 @@ public class Battery extends BroadcastReceiver {
 	if (value <= 0) {
 	    // Set final screen and end.
 	    current_act.setContentView(R.layout.battery_out);
+	    minuter.cancel();
 	    return false;
 	} else {
 	    // End if there is no battery.

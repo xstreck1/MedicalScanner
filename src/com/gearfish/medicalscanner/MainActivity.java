@@ -17,7 +17,7 @@ import android.widget.ImageView;
  * @author punyone
  * 
  */
-class MainActivity extends Activity {
+public class MainActivity extends Activity {
     private ImageView logo_view;
     private AnimationDrawable logo_anim;
 

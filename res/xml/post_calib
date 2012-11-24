@@ -3,9 +3,9 @@
 	   <TEXT>Test spaces       tested.</TEXT>
 	</RESULT>
 	<RESULT key="Purger" >
-	   <TEXT>Test newline \n tested.</TEXT>
+	   <TEXT>Test &#10; newline \u000d tested.</TEXT>
 	</RESULT>
 	<RESULT key="Adam" >
-	   <TEXT>Test special !@#$%^&*()_+{}:"|<>?-=[];'\,./ tested</TEXT>
+	   <TEXT>Test special &amp;!@#$%^*()_+{}:"|&lt;&gt;?-=[];'\\,./ tested </TEXT>
 	</RESULT>
 </RESULTS>

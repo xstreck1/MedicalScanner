@@ -19,7 +19,7 @@ import android.widget.ImageView;
  * @author punyone
  * 
  */
-class Scanner extends Activity implements CameraPreview.OnQrDecodedListener {
+public class Scanner extends Activity implements CameraPreview.OnQrDecodedListener {
     private CameraPreview mCameraPreview;
     private SharedPreferences.Editor edit;
     private SharedPreferences prefs;
