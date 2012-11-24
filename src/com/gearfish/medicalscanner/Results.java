@@ -112,18 +112,18 @@ public class Results extends Activity {
 		// Wait for the one whose attribute matches the key.
 		else if (xpp.getAttributeValue(0).equals(key)) {
 		    // Get the text node.
-		    while (xpp.getEventType() != XmlPullParser.TEXT && xpp.getEventType() != XmlPullParser.END_DOCUMENT)
-			xpp.next();
-
+		    xpp.next();
+		    if (xpp.getEventType() != XmlPullParser.TEXT)
+		    	return value;
+			
 		    // Get the data or leave the error string if the data are
 		    // null.
-		    value = (xpp.getText() == null) ? value : xpp.getText();
+		    return (xpp.getText() == null) ? value : xpp.getText();
 		}
 	    }
 	} catch (Throwable t) {
 	    t.printStackTrace();
 	}
-
 	return value;
     }
 

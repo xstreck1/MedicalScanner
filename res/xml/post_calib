@@ -3,7 +3,7 @@
 	   <TEXT>Test spaces       tested.</TEXT>
 	</RESULT>
 	<RESULT key="Purger" >
-	   <TEXT>Test &#10; newline \u000d tested.</TEXT>
+	   <TEXT>Test &#10;newline tested.</TEXT>
 	</RESULT>
 	<RESULT key="Adam" >
 	   <TEXT>Test special &amp;!@#$%^*()_+{}:"|&lt;&gt;?-=[];'\\,./ tested </TEXT>
