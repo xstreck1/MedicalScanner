@@ -47,19 +47,7 @@ public class Results extends Activity {
     public void onResume() {
 		super.onResume();
 		
-		int battery = BatteryReciever.value;
-		if (battery <= 0)
-			setContentView(R.layout.battery_out);
-		else {
-			if (battery >= 75)
-				((ImageView) findViewById(R.id.battery)).setImageResource(R.drawable.battery_01);
-			else if (battery >= 50)
-				((ImageView) findViewById(R.id.battery)).setImageResource(R.drawable.battery_02);
-			else if (battery >= 25)
-				((ImageView) findViewById(R.id.battery)).setImageResource(R.drawable.battery_03);
-			else
-				((ImageView) findViewById(R.id.battery)).setImageResource(R.drawable.battery_04);
-			
+		if (Battery.setPicture(this)) {
 			if (my_pic == Pic_type.human)
 				((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2a);
 			else if (my_pic == Pic_type.enemy)

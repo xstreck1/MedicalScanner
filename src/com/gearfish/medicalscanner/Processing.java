@@ -25,30 +25,16 @@ public class Processing extends Activity {
 	public void onResume() {
 		super.onResume();
 		
-		int battery = BatteryReciever.value;
-
-		if (battery >= 75)
-			((ImageView) findViewById(R.id.battery))
-					.setImageResource(R.drawable.battery_01);
-		else if (battery >= 50)
-			((ImageView) findViewById(R.id.battery))
-					.setImageResource(R.drawable.battery_02);
-		else if (battery >= 25)
-			((ImageView) findViewById(R.id.battery))
-					.setImageResource(R.drawable.battery_03);
-		else
-			((ImageView) findViewById(R.id.battery))
-					.setImageResource(R.drawable.battery_04);
-
-		
-		// Start timer for processing animation
-		delay = new Timer();
-		delay.schedule(new TimerTask(){
-			@Override
-			public void run() {
-				displayResult();
-			}
-		}, WAIT_TIME);
+		if (Battery.setPicture(this)) {
+			// Start timer for processing animation
+			delay = new Timer();
+			delay.schedule(new TimerTask(){
+				@Override
+				public void run() {
+					displayResult();
+				}
+			}, WAIT_TIME);
+		}
 	}
 	
     @Override

@@ -19,39 +19,22 @@ public class MainActivity extends Activity {
     }
     
     @Override
-    public void onWindowFocusChanged(boolean has_focus) {
-    	super.onWindowFocusChanged(has_focus);
-    	
-    	if (has_focus) {
-    		int battery = BatteryReciever.value;
-    		if (battery <= 0)
-    			setContentView(R.layout.battery_out);
-    		else {
-	    		setContentView(R.layout.activity_main);
+	public void onWindowFocusChanged(boolean has_focus) {
+		super.onWindowFocusChanged(has_focus);
 
-				if (battery >= 75)
-					((ImageView) findViewById(R.id.battery))
-							.setImageResource(R.drawable.battery_01);
-				else if (battery >= 50)
-					((ImageView) findViewById(R.id.battery))
-							.setImageResource(R.drawable.battery_02);
-				else if (battery >= 25)
-					((ImageView) findViewById(R.id.battery))
-							.setImageResource(R.drawable.battery_03);
-				else
-					((ImageView) findViewById(R.id.battery))
-							.setImageResource(R.drawable.battery_04);	
-	    		
-	    		logo_view = (ImageView) findViewById(R.id.logoAnimation);
-	    		logo_anim = (AnimationDrawable) logo_view.getDrawable();
-	    		logo_anim.start();
-    		}
-    	}    	
-    }
+		if (has_focus && Battery.setPicture(this)) {
+			logo_view = (ImageView) findViewById(R.id.logoAnimation);
+			if (logo_view != null) {
+				logo_anim = (AnimationDrawable) logo_view.getDrawable();
+				logo_anim.start();
+			}
+		}
+	}
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
+		setContentView(R.layout.activity_main);
         
         // If the code was read and the activity was not killed for any other reason (button push), pass the value to the reader 
         if (resultCode == RESULT_OK) {   		    		
@@ -68,20 +51,7 @@ public class MainActivity extends Activity {
     public void startScan(View view) {
 		setContentView(R.layout.loading);
 		
-		int battery = BatteryReciever.value;
-		
-		if (battery >= 75)
-			((ImageView) findViewById(R.id.battery))
-					.setImageResource(R.drawable.battery_01);
-		else if (battery >= 50)
-			((ImageView) findViewById(R.id.battery))
-					.setImageResource(R.drawable.battery_02);
-		else if (battery >= 25)
-			((ImageView) findViewById(R.id.battery))
-					.setImageResource(R.drawable.battery_03);
-		else
-			((ImageView) findViewById(R.id.battery))
-					.setImageResource(R.drawable.battery_04);	
+		Battery.setPicture(this);
 		
 		Intent intent = new Intent(this, Scanner.class);
 		startActivityForResult(intent, 0);

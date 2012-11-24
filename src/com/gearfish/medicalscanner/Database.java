@@ -31,19 +31,7 @@ public class Database extends ListActivity {
     @Override
     public void onResume() {
 		super.onResume();
-		int battery = BatteryReciever.value;
-		if (battery <= 0)
-			setContentView(R.layout.battery_out);
-		else {
-			if (battery >= 75)
-				((ImageView) findViewById(R.id.battery)).setImageResource(R.drawable.battery_01);
-			else if (battery >= 50)
-				((ImageView) findViewById(R.id.battery)).setImageResource(R.drawable.battery_02);
-			else if (battery >= 25)
-				((ImageView) findViewById(R.id.battery)).setImageResource(R.drawable.battery_03);
-			else
-				((ImageView) findViewById(R.id.battery)).setImageResource(R.drawable.battery_04);
-		}
+		Battery.setPicture(this);
     }
 	
     /**

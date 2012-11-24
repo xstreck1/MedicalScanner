@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class Starter extends Activity {
 	SharedPreferences.Editor edit;
-	BatteryReciever receiver;
+	Battery receiver;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class Starter extends Activity {
     		finish();
 
 	    IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-	    receiver = new BatteryReciever(Integer.valueOf(time_string));
+	    receiver = new Battery(Integer.valueOf(time_string));
 	    registerReceiver(receiver, filter);
     	
     	startActivity(new Intent(this,MainActivity.class));
