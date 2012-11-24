@@ -19,6 +19,9 @@ public class Starter extends Activity {
         setContentView(R.layout.starter);
         
         edit = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit();
+        receiver = new Battery();
+	    IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+        registerReceiver(receiver, filter);
     }
     
     public void chooseCalibration(View view) {
@@ -32,11 +35,9 @@ public class Starter extends Activity {
     	
     	String time_string = (((EditText)findViewById(R.id.timingField)).getText()).toString();
     	if (Integer.valueOf(time_string) <= 0)
-    		finish();
-
-	    IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-	    receiver = new Battery(Integer.valueOf(time_string));
-	    registerReceiver(receiver, filter);
+    		return;
+    	
+	    receiver.setTime(Integer.valueOf(time_string));
     	
     	startActivity(new Intent(this,MainActivity.class));
     }

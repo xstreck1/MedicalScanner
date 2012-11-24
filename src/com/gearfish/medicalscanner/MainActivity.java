@@ -56,6 +56,7 @@ public class MainActivity extends Activity {
     		return;
     	
 		setContentView(R.layout.loading);
+		Battery.setActivity(this);
 		
 		Intent intent = new Intent(this, Scanner.class);
 		startActivityForResult(intent, 0);
