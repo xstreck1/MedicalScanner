@@ -64,7 +64,8 @@ public class Processing extends Activity {
      */
     private void displayResult() {
 	Intent mIntent = new Intent(this, Results.class);
-	startActivity(mIntent);
+	if(Battery.setActivity(this))
+	    startActivity(mIntent);
 	finish();
     }
 }
