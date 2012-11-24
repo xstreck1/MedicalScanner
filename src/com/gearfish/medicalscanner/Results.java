@@ -77,7 +77,7 @@ public class Results extends Activity {
 		((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2b);
 	    else
 		((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2c);
-	} 
+	}
     }
 
     /**
@@ -110,12 +110,12 @@ public class Results extends Activity {
 		// Wait for the one whose attribute matches the key.
 		else if (xpp.getAttributeValue(0).equals(key)) {
 		    // Get the text node.
-		    do { 
-			xpp.next(); 
+		    do {
+			xpp.next();
 			if (xpp.getEventType() == XmlPullParser.END_TAG)
 			    return value;
 		    } while (xpp.getEventType() != XmlPullParser.TEXT);
-		  
+
 		    // Get the data or leave the error string if the data are
 		    // null.
 		    return xpp.getText();

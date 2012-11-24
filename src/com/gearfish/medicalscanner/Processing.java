@@ -64,8 +64,14 @@ public class Processing extends Activity {
      */
     private void displayResult() {
 	Intent mIntent = new Intent(this, Results.class);
-	if(Battery.setActivity(this))
-	    startActivity(mIntent);
+	startActivity(mIntent);
 	finish();
+    }
+    
+    @Override
+    public void onDestroy() {
+	super.onDestroy();
+	
+	delay.cancel();
     }
 }
