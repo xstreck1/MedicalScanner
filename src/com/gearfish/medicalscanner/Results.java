@@ -44,8 +44,8 @@ public class Results extends Activity {
 	// Get the data:
 	// Find out what the last result was - use 0 if you can't find it.
 	int result_num = prefs.getInt(getString(R.string.results_number), 0);
-	// Get a result number if it was scanned (as opposed to invoked from
-	// database).
+	// Get a result number if it was chosen (as opposed to invoked from the
+	// scanner).
 	result_num = getIntent().getIntExtra(getString(R.string.result_choice), result_num);
 	// Get key for the results itself.
 	String key = prefs.getString(Integer.toString(result_num), getString(R.string.err_result));
