@@ -8,6 +8,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.BatteryManager;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.widget.ImageView;
 
@@ -25,6 +27,13 @@ public class Battery extends BroadcastReceiver {
 	private static int value = 0;
 
 	private static Activity current_act = null;
+	
+	private static Handler handler = new Handler() {
+		@Override
+		public void handleMessage(Message msg) {
+			setPicture();
+		}
+	};
 
 	public Battery(int time_in_mins) {
 		start_time = remaining_time = time_in_mins * SECONDS_PER_MINUTE;
@@ -43,6 +52,7 @@ public class Battery extends BroadcastReceiver {
 				if (remaining_time-- > 0)
 					setTimer();
 				value = Math.min(value, ((remaining_time * 100) / start_time));
+				handler.sendEmptyMessage(0);
 			}
 		}, SECOND);
 	}

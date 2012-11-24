@@ -51,9 +51,11 @@ public class MainActivity extends Activity {
      * @param view caller of this function - only the startScan button
      */
     public void startScan(View view) {
+    	// Block scan if the battery is depleted.
+    	if(!Battery.setActivity(this))
+    		return;
+    	
 		setContentView(R.layout.loading);
-		
-		Battery.setActivity(this);
 		
 		Intent intent = new Intent(this, Scanner.class);
 		startActivityForResult(intent, 0);
@@ -62,7 +64,7 @@ public class MainActivity extends Activity {
     /**
      * Call for the activity that will display older results.
      * 
-     * @param view 
+     * @param view	the button responsible for calling this
      */
 	public void goToDatabase(View view) {
 		Intent intent = new Intent(this, Database.class);
