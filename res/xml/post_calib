@@ -1,17 +1,11 @@
 <RESULTS>
 	<RESULT key="Martusak" >
-	   <NAME>Marusak</NAME>
-	   <RACE>Clovek</RACE>
-	   <HEALT>Vase DNA uz neobsahuje skoro nic...</HEALT>
+	   <TEXT>Test spaces       tested.</TEXT>
 	</RESULT>
 	<RESULT key="Purger" >
-	   <NAME>Purger</NAME>
-	   <RACE>Zombie Nepritel</RACE>
-	   <HEALT>Dostatek alkoholu.</HEALT>
+	   <TEXT>Test newline \n tested.</TEXT>
 	</RESULT>
 	<RESULT key="Adam" >
-	   <NAME>Adam</NAME>
-	   <RACE>Primat</RACE>
-	   <HEALT>Stale detekovano nadm-nePritelerne ochlupeni.</HEALT>
+	   <TEXT>Test special !@#$%^&*()_+{}:"|<>?-=[];'\,./ tested</TEXT>
 	</RESULT>
 </RESULTS>

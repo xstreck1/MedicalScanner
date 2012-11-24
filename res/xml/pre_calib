@@ -1,17 +1,11 @@
 <RESULTS>
 	<RESULT key="Martusak" >
-	   <NAME>Marusak</NAME>
-	   <RACE>Clovek</RACE>
-	   <HEALT>Vase DNA obsahuje TH-64-alfa, což je geneticky poklad...Vase DNA obsahuje TH-64-alfa, což je geneticky poklad...Vase DNA obsahuje TH-64-alfa, což je geneticky poklad...</HEALT>
+	   <TEXT></TEXT>
 	</RESULT>
 	<RESULT key="Purger" >
-	   <NAME>Purger</NAME>
-	   <RACE>Zombie</RACE>
-	   <HEALT>Prilis ... malo ... alkoholu.</HEALT>
+	   <TEXT>NepritelC1 test.</TEXT>
 	</RESULT>
 	<RESULT key="Adam" >
-	   <NAME>Adam</NAME>
-	   <RACE>Primat</RACE>
-	   <HEALT>Detekovano nadmerne ochlupeni.</HEALT>
+	   <TEXT>Test tab and return \t tested tab \r tested return.</TEXT>
 	</RESULT>
 </RESULTS>

@@ -17,6 +17,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
+ * This class is taken from the original project.
+ * 
  * A simple wrapper around a Camera and a SurfaceView that renders a centered preview of the Camera
  * to the surface. Also provided autofocus effect.
  */

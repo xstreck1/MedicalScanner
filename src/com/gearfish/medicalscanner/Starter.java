@@ -16,7 +16,7 @@ import android.widget.EditText;
  * @author punyone
  * 
  */
-public class Starter extends Activity {
+class Starter extends Activity {
     SharedPreferences.Editor edit;
     Battery receiver;
 
