@@ -47,14 +47,17 @@ public class Results extends Activity {
     public void onResume() {
 		super.onResume();
 		
-		if (Battery.setPicture(this)) {
+		if (Battery.setActivity(this)) {
 			if (my_pic == Pic_type.human)
 				((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2a);
 			else if (my_pic == Pic_type.enemy)
 	        	((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2b);
 	        else
 	        	((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2c);
-		}    
+		}  
+		else {
+			finish();
+		}
     }
     
     String getData(final String key) {

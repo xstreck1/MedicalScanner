@@ -92,8 +92,10 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 		Log.d(getComponentName().flattenToShortString(), "onResume()");
 		
 		// Try to get the camera - if you fail, end building the application
-		while (!mCameraPreview.acquireCamera(getWindowManager().getDefaultDisplay().getRotation())) {
-			try {
+		if (!mCameraPreview.acquireCamera(getWindowManager().getDefaultDisplay().getRotation())) {
+			if (!Battery.setActivity(this))
+				goBack();
+			else try {
 				Thread.sleep(WAIT);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -102,9 +104,6 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 				return;
 			}
 		}
-		
-		if (!Battery.setPicture(this))
-			goBack();
 	}
 
 	@Override

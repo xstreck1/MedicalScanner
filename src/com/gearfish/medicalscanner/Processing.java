@@ -25,7 +25,7 @@ public class Processing extends Activity {
 	public void onResume() {
 		super.onResume();
 		
-		if (Battery.setPicture(this)) {
+		if (Battery.setActivity(this)) {
 			// Start timer for processing animation
 			delay = new Timer();
 			delay.schedule(new TimerTask(){

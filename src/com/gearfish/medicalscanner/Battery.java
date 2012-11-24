@@ -9,7 +9,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.BatteryManager;
 import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
 
 public class Battery extends BroadcastReceiver {
@@ -22,8 +21,10 @@ public class Battery extends BroadcastReceiver {
 
 	private int scale = -1;
 	private int level = -1;
-	
-	static int value = 0;
+
+	private static int value = 0;
+
+	private static Activity current_act = null;
 
 	public Battery(int time_in_mins) {
 		start_time = remaining_time = time_in_mins * SECONDS_PER_MINUTE;
@@ -58,27 +59,38 @@ public class Battery extends BroadcastReceiver {
 		value = Math.min(((scale * 100) / level),
 				((remaining_time * 100) / start_time));
 	}
-	
+
+	public static boolean setActivity(Activity passed_activity) {
+		current_act = passed_activity;
+		return setPicture();
+	}
+
 	/**
-	 * Static function that is responsible for choosing the right picture of the battery in the current activity. 
-	 * There are four pictures in dependence on what is the current status of the batter. If the battery is depleted, 
+	 * Static function that is responsible for choosing the right picture of the
+	 * battery in the current activity. There are four pictures in dependence on
+	 * what is the current status of the batter. If the battery is depleted,
 	 * "please charge" screen is shown.
 	 * 
-	 * @param passed_activity	an activity that holds battery layout and is being shown now
-	 * @return	true if the screen remained active, false if the please charge screen is shown or if there is no battery layout
+	 * @param passed_activity
+	 *            an activity that holds battery layout and is being shown now
+	 * @return true if the screen remained active, false if the please charge
+	 *         screen is shown or if there is no battery layout
 	 */
-	public static boolean setPicture(Activity passed_activity) {
+	public static boolean setPicture() {
+		if (current_act == null)
+			return false;
+
 		if (value <= 0) {
 			// Set final screen and end.
-			passed_activity.setContentView(R.layout.battery_out);
+			current_act.setContentView(R.layout.battery_out);
 			return false;
-		}
-		else {
+		} else {
 			// End if there is no battery.
-			ImageView battery_view = (ImageView) passed_activity.findViewById(R.id.battery);
+			ImageView battery_view = (ImageView) current_act
+					.findViewById(R.id.battery);
 			if (battery_view == null)
 				return false;
-			
+
 			// Pick the picture.
 			int picture_ID = 0;
 			if (value >= 75)
@@ -89,10 +101,10 @@ public class Battery extends BroadcastReceiver {
 				picture_ID = R.drawable.battery_03;
 			else
 				picture_ID = R.drawable.battery_04;
-			
+
 			// Set the picture.
 			battery_view.setImageResource(picture_ID);
 			return true;
-		}	
+		}
 	}
 };

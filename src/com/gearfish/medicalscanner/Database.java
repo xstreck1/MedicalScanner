@@ -31,7 +31,8 @@ public class Database extends ListActivity {
     @Override
     public void onResume() {
 		super.onResume();
-		Battery.setPicture(this);
+		if(!Battery.setActivity(this))
+			finish();
     }
 	
     /**

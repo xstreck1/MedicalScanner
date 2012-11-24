@@ -1,3 +1,5 @@
+// Error on depleted battery starts the scanner working
+
 package com.gearfish.medicalscanner;
 
 import android.app.Activity;
@@ -22,7 +24,7 @@ public class MainActivity extends Activity {
 	public void onWindowFocusChanged(boolean has_focus) {
 		super.onWindowFocusChanged(has_focus);
 
-		if (has_focus && Battery.setPicture(this)) {
+		if (has_focus && Battery.setActivity(this)) {
 			logo_view = (ImageView) findViewById(R.id.logoAnimation);
 			if (logo_view != null) {
 				logo_anim = (AnimationDrawable) logo_view.getDrawable();
@@ -51,7 +53,7 @@ public class MainActivity extends Activity {
     public void startScan(View view) {
 		setContentView(R.layout.loading);
 		
-		Battery.setPicture(this);
+		Battery.setActivity(this);
 		
 		Intent intent = new Intent(this, Scanner.class);
 		startActivityForResult(intent, 0);
