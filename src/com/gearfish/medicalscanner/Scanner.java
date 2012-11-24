@@ -106,11 +106,8 @@ public class Scanner extends Activity implements CameraPreview.OnQrDecodedListen
 	super.onResume();
 	Log.d(getComponentName().flattenToShortString(), "onResume()");
 
-	// End if there is no battery left.
-	if (!Battery.setActivity(this))
-	    goBack();
-
-	else { // Repeat camera acquisitions until you get it.
+	// Set the battery.
+	if (Battery.setActivity(this))  { // Repeat camera acquisitions until you get it.
 	    while (!mCameraPreview.acquireCamera(getWindowManager().getDefaultDisplay().getRotation())) {
 		try {
 		    Thread.sleep(WAIT);

@@ -77,9 +77,7 @@ public class Results extends Activity {
 		((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2b);
 	    else
 		((ImageView) findViewById(R.id.resultLogo)).setImageResource(R.drawable.results2c);
-	} else {
-	    finish();
-	}
+	} 
     }
 
     /**

@@ -86,6 +86,7 @@ class Battery extends BroadcastReceiver {
      */
     private void setTimer() {
 	minuter.schedule(new UpdateTask(), SECOND);
+	value = 100;
     }
 
     @Override
@@ -128,9 +129,12 @@ class Battery extends BroadcastReceiver {
 	    return false;
 
 	if (value <= 0) {
-	    // Set final screen and end.
-	    current_act.setContentView(R.layout.battery_out);
-	    minuter.cancel();
+	    // End the activity if it is not the main one. Otherwise set the final picture.
+	    if (current_act.getClass() != MainActivity.class)
+		current_act.finish();
+	    else {
+		current_act.setContentView(R.layout.battery_out);
+	    }
 	    return false;
 	} else {
 	    // End if there is no battery.

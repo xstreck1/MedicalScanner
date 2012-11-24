@@ -43,8 +43,7 @@ public class Database extends ListActivity {
 	super.onResume();
 
 	// If started with empty battery, finish it.
-	if (!Battery.setActivity(this))
-	    finish();
+	Battery.setActivity(this);
     }
 
     /**

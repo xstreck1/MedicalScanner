@@ -29,6 +29,13 @@ public class MainActivity extends Activity {
     }
 
     @Override
+    public void onResume() {
+	super.onResume();
+	
+	Battery.setActivity(this);
+    }
+    
+    @Override
     public void onWindowFocusChanged(boolean has_focus) {
 	super.onWindowFocusChanged(has_focus);
 
