@@ -3,7 +3,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:onClick="goBack"
-    android:orientation="vertical" >
+    android:orientation="vertical"   
+    android:keepScreenOn="true" >
  	
 	<com.gearfish.medicalscanner.CameraPreview
 	    android:id="@+id/surface"
