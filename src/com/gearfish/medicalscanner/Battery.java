@@ -25,6 +25,7 @@ import android.widget.ImageView;
 class Battery extends BroadcastReceiver {
     private final static int SECOND = 1000;
     private final static int SECONDS_PER_MINUTE = 60;
+    private final static int STEPS = 100; // Lenght of the scale of battery values.
 
     private static int running_time = 1; // Runtime given in seconds.
     private static int remaining_time = 1; // What is remaining of the runtime.
@@ -34,7 +35,11 @@ class Battery extends BroadcastReceiver {
 
     private static Activity current_act = null; // Activity that is currently
 						// active.
-
+    /**
+     * Schedules updates.
+     */
+    static Timer minuter;
+    
     /**
      * A handler that updates the picture dependent on the current level.
      */
@@ -55,19 +60,14 @@ class Battery extends BroadcastReceiver {
 	@Override
 	public void run() {
 	    // Count down seconds - stop at zero.
-	    if (remaining_time-- > 0)
-		setTimer();
+	    if (remaining_time-- <= 0)
+		minuter.cancel();
 
 	    // Update data.
-	    value = Math.min(value, ((remaining_time * 100) / running_time));
+	    value = Math.min(value, computeValue(remaining_time,running_time));
 	    handler.sendEmptyMessage(0);
 	}
     };
-
-    /**
-     * Schedules updates.
-     */
-    static Timer minuter = new Timer();
 
     /**
      * Set times and start first counting.
@@ -77,28 +77,40 @@ class Battery extends BroadcastReceiver {
      */
     public void setTime(int time_in_mins) {
 	running_time = remaining_time = time_in_mins * SECONDS_PER_MINUTE;
-	setTimer();
+	value = STEPS;
+	if (minuter != null)
+	    minuter.cancel();
+	minuter = new Timer();
+	minuter.scheduleAtFixedRate(new UpdateTask(), 0, SECOND);
     }
 
     /**
-     * Start a new timer responsible of counting down the time. The timer
-     * updates itself each minute.
+     * Computes ratio of current energy to the remaining one and ceils it so it ends really at the last moment.
+     * 
+     * @param current	current energy value
+     * @param scale	scale of the energy value
+     * @return	current energy on the scale from 0 to 100
      */
-    private void setTimer() {
-	minuter.schedule(new UpdateTask(), SECOND);
-	value = 100;
+    private int computeValue(int current, int scale) {
+	double curr = current;
+	double scal = scale;
+	double ratio = curr / scal;
+	double value = Math.ceil(ratio * STEPS);
+	return (int) value;
     }
-
+    
     @Override
     public void onReceive(Context context, Intent intent) {
-	int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+	// Move the scale by 10% so it ends with 10% of energy if necessary.
 	int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
-
+	int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1) - (int) Math.round(scale * 0.1);
+	level = Math.max(0, level);
+	
 	Log.e("BatteryManager", "level is " + level + "/" + scale);
 
 	// Give the remaining number of percent of battery as a min(runtime,real
 	// battery)
-	value = Math.min(((level * 100) / scale), ((remaining_time * 100) / running_time));
+	value = Math.min(value, computeValue(level, scale));
     }
 
     /**

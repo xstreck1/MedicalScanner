@@ -51,13 +51,19 @@
         android:textAppearance="?android:attr/textAppearanceLarge" 
         android:minHeight="40pt" />
 
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="20pt" />
+
     <Button
         android:id="@+id/after_calibration_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="40pt"
         android:onClick="chooseCalibration"
         android:text="@string/after_calibraion"
-        android:textAppearance="?android:attr/textAppearanceLarge" 
-        android:minHeight="40pt" />
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </LinearLayout>
