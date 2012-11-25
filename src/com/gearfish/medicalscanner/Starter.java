@@ -46,7 +46,15 @@ public class Starter extends Activity {
 	edit.apply();
 
 	// Set new preference (true if the button was after calibration).
-	edit.putBoolean(getString(R.string.calib_pref_name), (view.getId() == R.id.after_calibration_button));
+	boolean calibration;
+	if (view.getId() == R.id.after_calibration_button)
+	    calibration = true;
+	else if (view.getId() == R.id.before_calibration_button)
+	    calibration = false;
+	else
+	    return;
+	
+	edit.putBoolean(getString(R.string.calib_pref_name), calibration);
 	edit.apply();
 
 	// Get the time to run and apply it.
