@@ -1,5 +1,7 @@
 package com.gearfish.medicalscanner;
 
+import org.xmlpull.v1.XmlPullParser;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -25,6 +27,8 @@ public class Database extends ListActivity {
 
     ListAdapter results; // List containing keys for the results.
     String[] results_list; // A list with numbers and keys.
+    
+    private XmlPullParser xpp; // Parser used for XML file database of strings.
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,46 @@ public class Database extends ListActivity {
 
 	// If started with empty battery, finish it.
 	Battery.setActivity(this);
+    }
+    
+    /**
+     * Converts key from the QR read to the name matched in the database.
+     * 
+     * @param key	key value in the database
+     * @return	name associated with the key
+     */
+    private final String getName(final String key) {
+	// Default value if the key is not found
+	String value = getString(R.string.err_name);
+
+	// Create the pull parser and associate it with the correct file
+	XmlPullParser xpp;
+	if (prefs.getBoolean(getString(R.string.calib_pref_name), false))
+	    xpp = getResources().getXml(R.xml.post_calib);
+	else
+	    xpp = getResources().getXml(R.xml.pre_calib);
+
+	boolean result_found = false;
+	boolean name_found = false;
+	// Search for the result and then for the NAME tags. When matching, get the first text and return it.
+	try {
+	    while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
+		if (xpp.getEventType() == XmlPullParser.START_TAG) {
+		    if (xpp.getName().equals("RESULT") && xpp.getAttributeValue(0).equals(key))
+			result_found = true;
+
+		    else if (result_found && xpp.getName().equals("NAME"))
+			name_found = true;
+		}
+		else if (xpp.getEventType() == XmlPullParser.TEXT && name_found) 
+		    return xpp.getText();
+		
+		xpp.next();
+	    }
+	} catch (Throwable t) {
+	    t.printStackTrace();
+	}
+	return value;
     }
 
     /**
@@ -80,7 +124,7 @@ public class Database extends ListActivity {
 		results_list[string_num - 1] += Integer.toString(string_num) + "   ";
 
 		// Add the content.
-		results_list[string_num - 1] += prefs.getString(Integer.toString(i), getString(R.string.wrong_res));
+		results_list[string_num - 1] += getName(prefs.getString(Integer.toString(i), getString(R.string.wrong_res)));
 	    }
 	}
     }
@@ -95,6 +139,7 @@ public class Database extends ListActivity {
 	finish();
     }
 
+    @Override
     public void onListItemClick(ListView parent, View v, int position, long id) {
 	// Check if there is any result, otherwise ban the output as a whole
 	if (prefs.getInt(getString(R.string.results_number), 0) == 0)

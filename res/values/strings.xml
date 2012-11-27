@@ -16,6 +16,7 @@
     <string name="database_filler">Predchozi vysledky.</string>
     <string name="no_res">Zadne vysledky v databazi.</string>   
     <string name="wrong_res">Vysledek scanu neni platny.</string>
+    <string name="err_name">Neplatne jmeno.</string>
     
     <!-- Scanner layout -->
     <string name="goBack">Ovladaci panel.</string>

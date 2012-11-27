@@ -52,9 +52,9 @@ public class Results extends Activity {
 	// Get the keyed data from the XML file.
 	String value = getData(key);
 
-	// Control presence of the "nepritel" string
+	// Control presence of the "Symbiont: negativní" string
 	my_pic = Pic_type.human;
-	if (value.replaceAll("\\s", " ").matches(".*[Nn][Ee][Pp][Rr][Ii][Tt][Ee][Ll].*"))
+	if (value.replaceAll("\\s", " ").matches(".*Symbiont.*") && !value.replaceAll("\\s", " ").matches(".*Symbiont:\\snegativní.*"))
 	    my_pic = Pic_type.enemy;
 	else if (value.matches(getString(R.string.err_data)))
 	    my_pic = Pic_type.error;
@@ -109,16 +109,22 @@ public class Results extends Activity {
 		    continue;
 		// Wait for the one whose attribute matches the key.
 		else if (xpp.getAttributeValue(0).equals(key)) {
-		    // Get the text node.
-		    do {
-			xpp.next();
-			if (xpp.getEventType() == XmlPullParser.END_TAG)
-			    return value;
-		    } while (xpp.getEventType() != XmlPullParser.TEXT);
-
+		    String text = "";
+		    // Get the three text nodes if present (NAME, RACE, GENOTYPE)
+		    for (int i = 0; i < 3; i++) {
+			do {
+			    xpp.next();
+			    if (xpp.getEventType() == XmlPullParser.END_DOCUMENT)
+				return value;
+			} while (xpp.getEventType() != XmlPullParser.TEXT);
+			// Add text when found
+			text += xpp.getText();
+			if (i < 2)
+			    text += "\n";
+		    }
 		    // Get the data or leave the error string if the data are
 		    // null.
-		    return xpp.getText();
+		    return text;
 		}
 	    }
 	} catch (Throwable t) {
