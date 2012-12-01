@@ -1,201 +1,206 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <RESULTS>
-    <RESULT key="N1">
+    <RESULT key="Neodym">
         <NAME>Neodym</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Konzul BDI Navarra. V případě problémů poskytněte veškerou dostupnou pomoc. Genom nTG1514.</HEALTH>
     </RESULT>
-    <RESULT key="N2">
+    <RESULT key="Niob">
         <NAME>Niob</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Konzul BDI Navarra. V případě problémů poskytněte veškerou dostupnou pomoc. Genom nTG1514.</HEALTH>
     </RESULT>
-    <RESULT key="N3">
+    <RESULT key="Motoko">
         <NAME>Motoko</NAME>
         <RACE>Cyborg</RACE>
         <HEALTH>Majetek BDI Navarra. V případě nalezení jistá odměna. Pozor, oproti standardu použit implantát A0001. Odstranění nedoporučujeme. Genom n21a.</HEALTH>
     </RESULT>
-    <RESULT key="N4">
+    <RESULT key="Sinistra">
         <NAME>Sinistra</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI, uvědomte vedení o případném zranění.  Genom nt1s342n.</HEALTH>
     </RESULT>
-    <RESULT key="N5">
+    <RESULT key="Pixel">
         <NAME>Pixel</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI.  Genom scx1d43.</HEALTH>
     </RESULT>
-    <RESULT key="N6">
+    <RESULT key="Cortex">
         <NAME>Cortex</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI.  Genom scx1d43.</HEALTH>
     </RESULT>
-    <RESULT key="N7">
+    <RESULT key="Neuro">
         <NAME>Neuro</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI. Genom x17d43.</HEALTH>
     </RESULT>
-    <RESULT key="N8">
+    <RESULT key="Ali">
         <NAME>Ali</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI. Genom 3n001.</HEALTH>
     </RESULT>
-    <RESULT key="N9">
+    <RESULT key="Nolan">
         <NAME>Nolan</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI. Genom s1n001.</HEALTH>
     </RESULT>
-    <RESULT key="N10">
+    <RESULT key="Vega">
         <NAME>Vega</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI. Genom a24n51.</HEALTH>
     </RESULT>
-    <RESULT key="N11">
+    <RESULT key="Isaac">
         <NAME>Isaac</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI. Genom a26zn51.</HEALTH>
     </RESULT>
-    <RESULT key="N12">
+    <RESULT key="Kane">
         <NAME>Kane</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI. Genom a16z5.</HEALTH>
     </RESULT>
-    <RESULT key="N13">
+    <RESULT key="Kvark">
         <NAME>Kvark</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI. Genom 277g46.</HEALTH>
     </RESULT>
-    <RESULT key="N14">
+    <RESULT key="Frank">
         <NAME>Frank</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI. Genom nC1s430.</HEALTH>
     </RESULT>
-    <RESULT key="N15">
+    <RESULT key="Tesla">
         <NAME>Tesla</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI. Genom 1Cs430.</HEALTH>
     </RESULT>
-    <RESULT key="N16">
+    <RESULT key="Dr. Mendel">
         <NAME>Dr. Mendel</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI. Genom gt24NcS.</HEALTH>
     </RESULT>
-    <RESULT key="N17">
+    <RESULT key="Acamar">
         <NAME>Acamar</NAME>
         <RACE>Belliger</RACE>
         <HEALTH>Zaměstnanec BDI. Genom gt34N1S.</HEALTH>
     </RESULT>
-    <RESULT key="N18">
+    <RESULT key="Kraz">
         <NAME>Kraz</NAME>
         <RACE>Belliger</RACE>
         <HEALTH>Zaměstnanec BDI. Genom gn224NcS.</HEALTH>
     </RESULT>
-    <RESULT key="N19">
+    <RESULT key="Menkab">
         <NAME>Menkab</NAME>
         <RACE>Belliger</RACE>
         <HEALTH>Zaměstnanec BDI. Genom sC132-N4.</HEALTH>
     </RESULT>
-    <RESULT key="N20">
+    <RESULT key="Rana">
         <NAME>Rana</NAME>
         <RACE>Belliger</RACE>
         <HEALTH>Zaměstnanec BDI. Genom g211t4NcS.</HEALTH>
     </RESULT>
-    <RESULT key="N21">
+    <RESULT key="Galen">
         <NAME>Galen</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI. Genom tr134b.</HEALTH>
     </RESULT>
-    <RESULT key="N22">
+    <RESULT key="Sargas">
         <NAME>Sargas</NAME>
         <RACE>Belliger</RACE>
         <HEALTH>Zaměstnanec BDI. Genom n23tcS.</HEALTH>
     </RESULT>
-    <RESULT key="N23">
+    <RESULT key="Girtab">
         <NAME>Girtab</NAME>
         <RACE>Belliger</RACE>
         <HEALTH>Zaměstnanec BDI. Genom n1723tcS.</HEALTH>
     </RESULT>
-    <RESULT key="N24">
+    <RESULT key="Keid">
         <NAME>Keid</NAME>
         <RACE>Belliger</RACE>
         <HEALTH>Zaměstnanec BDI. Genom n143tcS.</HEALTH>
     </RESULT>
-    <RESULT key="N25">
+    <RESULT key="Marfik">
         <NAME>Marfik</NAME>
         <RACE>Navarrensis</RACE>
         <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-B. Implantát: SUB42, TC 34 a BN16.</HEALTH>
     </RESULT>
-    <RESULT key="N26">
+    <RESULT key="Errai">
         <NAME>Errai</NAME>
         <RACE>Navarrensis</RACE>
         <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-B. Implantát: SUB42, TC 34 a BN16.</HEALTH>
     </RESULT>
-    <RESULT key="N27">
+    <RESULT key="Deneb">
         <NAME>Deneb</NAME>
         <RACE>Navarrensis</RACE>
         <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-A. Implantát: SUB42, TC 34 a BN16.</HEALTH>
     </RESULT>
-    <RESULT key="N28">
+    <RESULT key="Tachyon">
         <NAME>Tachyon</NAME>
         <RACE>Exarchos</RACE>
         <HEALTH>Zaměstnanec BDI. Uvědomte vedení o případném zranění subjektu a poskytněte veškerou dostupnou pomoc. Genom g3n23tcS.</HEALTH>
     </RESULT>
-    <RESULT key="N29">
+    <RESULT key="Tahir">
         <NAME>Tahir</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Genom tc24.</HEALTH>
     </RESULT>
-    <RESULT key="N30">
+    <RESULT key="Izar">
+        <NAME>Izar</NAME>
+        <RACE>Sapiens</RACE>
+        <HEALTH>Genom tsr27b.</HEALTH>
+    </RESULT>
+    <RESULT key="Izar ">
         <NAME>Izar </NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Genom tsr27b.</HEALTH>
     </RESULT>
-    <RESULT key="N31">
+    <RESULT key="Skat">
         <NAME>Skat</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Genom 233i6.</HEALTH>
     </RESULT>
-    <RESULT key="N32">
+    <RESULT key="Almak">
         <NAME>Almak</NAME>
         <RACE>Aquaticus</RACE>
         <HEALTH>Genom 26-43.</HEALTH>
     </RESULT>
-    <RESULT key="N33">
+    <RESULT key="Watt">
         <NAME>Watt</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI. Genom n123tcS.</HEALTH>
     </RESULT>
-    <RESULT key="N34">
+    <RESULT key="Antares">
         <NAME>Antares</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Genom e132n.</HEALTH>
     </RESULT>
-    <RESULT key="N35">
+    <RESULT key="Geon">
         <NAME>Geon</NAME>
         <RACE>Exarchos</RACE>
         <HEALTH>Nobilia. Poskytněte veškerou pomoc! Genom: g3n23tcS</HEALTH>
     </RESULT>
-    <RESULT key="N36">
+    <RESULT key="Pleion">
         <NAME>Pleion</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Nobilia. Poskytněte veškerou pomoc! Genom: gi21tcS</HEALTH>
     </RESULT>
-    <RESULT key="N37">
+    <RESULT key="Polaris">
         <NAME>Polaris</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Nobilia. Poskytněte veškerou pomoc! Genom: gi27tcS</HEALTH>
     </RESULT>
-    <RESULT key="N38">
+    <RESULT key="Frame">
         <NAME>Frame</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Genom: fr17-bg4</HEALTH>
     </RESULT>
-    <RESULT key="N39">
+    <RESULT key="Batou">
         <NAME>Batou</NAME>
         <RACE>Cyborg</RACE>
         <HEALTH>Nobilia. Poskytněte veškerou pomoc! Genom: n24d.</HEALTH>
     </RESULT>
-    <RESULT key="N40">
+    <RESULT key="Togusa">
         <NAME>Togusa</NAME>
         <RACE>Cyborg</RACE>
         <HEALTH>Nobilia. Poskytněte veškerou pomoc! Genom: n24d.</HEALTH>
