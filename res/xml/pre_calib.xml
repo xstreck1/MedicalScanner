@@ -28,7 +28,7 @@
     <RESULT key="Cortex">
         <NAME>Cortex</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Zaměstnanec BDI.  Genom scx1d43.</HEALTH>
+        <HEALTH>Abnormální hladina stresu. Zaměstnanec BDI.  Genom scx1d43.</HEALTH>
     </RESULT>
     <RESULT key="Neuro">
         <NAME>Neuro</NAME>
@@ -38,7 +38,7 @@
     <RESULT key="Ali">
         <NAME>Ali</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom 3n001.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom 3n042n.</HEALTH>
     </RESULT>
     <RESULT key="Nolan">
         <NAME>Nolan</NAME>
@@ -48,7 +48,7 @@
     <RESULT key="Vega">
         <NAME>Vega</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom a24n51.</HEALTH>
+        <HEALTH>Rostoucí nádor na mozgu v oblasti prosencephalonu. Zdravotní stav: zhoršující se Zaměstnanec BDI. Genom a24n51.</HEALTH>
     </RESULT>
     <RESULT key="Isaac">
         <NAME>Isaac</NAME>
@@ -58,12 +58,12 @@
     <RESULT key="Kane">
         <NAME>Kane</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom a16z5.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom a16z5NcS.</HEALTH>
     </RESULT>
     <RESULT key="Kvark">
         <NAME>Kvark</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom 277g46.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom 277g6NcS.</HEALTH>
     </RESULT>
     <RESULT key="Frank">
         <NAME>Frank</NAME>
@@ -73,7 +73,7 @@
     <RESULT key="Tesla">
         <NAME>Tesla</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom 1Cs430.</HEALTH>
+        <HEALTH>Jemně zvýšené množství radiace v těle. Zaměstnanec BDI. Genom 1Cs42n.</HEALTH>
     </RESULT>
     <RESULT key="Dr. Mendel">
         <NAME>Dr. Mendel</NAME>
@@ -83,7 +83,7 @@
     <RESULT key="Acamar">
         <NAME>Acamar</NAME>
         <RACE>Belliger</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom gt34N1S.</HEALTH>
+        <HEALTH>Stopy poškození jater a ledvin, indikující používaní návykových látek v minulosti. Zaměstnanec BDI. Genom gt34NcS.</HEALTH>
     </RESULT>
     <RESULT key="Kraz">
         <NAME>Kraz</NAME>
@@ -93,52 +93,52 @@
     <RESULT key="Menkab">
         <NAME>Menkab</NAME>
         <RACE>Belliger</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom sC132-N4.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom sC13o42n.</HEALTH>
     </RESULT>
     <RESULT key="Rana">
         <NAME>Rana</NAME>
         <RACE>Belliger</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom g211t4NcS.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom g211t42n.</HEALTH>
     </RESULT>
     <RESULT key="Galen">
         <NAME>Galen</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom tr134b.</HEALTH>
+        <HEALTH>Zaměstnanec BDI, uvědomte vedení o případném zranění. Genom tr13b42n.</HEALTH>
     </RESULT>
     <RESULT key="Sargas">
         <NAME>Sargas</NAME>
         <RACE>Belliger</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom n23tcS.</HEALTH>
+        <HEALTH> Zaměstnanec BDI. Genom n23t42n.</HEALTH>
     </RESULT>
     <RESULT key="Girtab">
         <NAME>Girtab</NAME>
         <RACE>Belliger</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom n1723tcS.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom n1723NcS.</HEALTH>
     </RESULT>
     <RESULT key="Wei">
         <NAME>Wei</NAME>
         <RACE>Belliger</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom n143tcS.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom n1n24dcS.</HEALTH>
     </RESULT>
     <RESULT key="Marfik">
         <NAME>Marfik</NAME>
         <RACE>Navarrensis</RACE>
-        <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-B. Implantát: SUB42, TC 34 a BN16.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-B. Implantát: SUB42 a BN16.</HEALTH>
     </RESULT>
     <RESULT key="Errai">
         <NAME>Errai</NAME>
         <RACE>Navarrensis</RACE>
-        <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-B. Implantát: SUB42, TC 34 a BN16.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-B. Implantát: SUB42 a TC 34.</HEALTH>
     </RESULT>
     <RESULT key="Deneb">
         <NAME>Deneb</NAME>
         <RACE>Navarrensis</RACE>
-        <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-A. Implantát: SUB42, TC 34 a BN16.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-A. Implantát: SUB42 a TC 34.</HEALTH>
     </RESULT>
     <RESULT key="Tachyon">
         <NAME>Tachyon</NAME>
         <RACE>Exarchos</RACE>
-        <HEALTH>Zaměstnanec BDI. Uvědomte vedení o případném zranění subjektu a poskytněte veškerou dostupnou pomoc. Genom g3n23tcS.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Uvědomte vedení o případném zranění subjektu. Poškození mozku způsobené dlouhodobým působením radiace. Částečná amnézie. Genom g3ex-42n.</HEALTH>
     </RESULT>
     <RESULT key="Tahir">
         <NAME>Tahir</NAME>
@@ -148,37 +148,32 @@
     <RESULT key="Izar">
         <NAME>Izar</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Genom tsr27b.</HEALTH>
-    </RESULT>
-    <RESULT key="Izar ">
-        <NAME>Izar </NAME>
-        <RACE>Sapiens</RACE>
-        <HEALTH>Genom tsr27b.</HEALTH>
+        <HEALTH>Pokusný objekt Z. V případě nalezení doručit L.Cypherovi do sektoru K7453I. Genom blth7NcS.</HEALTH>
     </RESULT>
     <RESULT key="Skat">
         <NAME>Skat</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Genom 233i6.</HEALTH>
+        <HEALTH>Modifikace regeneračních a imunitních systémů, podporující délku života. Genom 233i6.</HEALTH>
     </RESULT>
     <RESULT key="Almak">
         <NAME>Almak</NAME>
         <RACE>Aquaticus</RACE>
-        <HEALTH>Genom 26-43.</HEALTH>
+        <HEALTH>Implantáty neznámého původu. Genom 26-43.</HEALTH>
     </RESULT>
     <RESULT key="Watt">
         <NAME>Watt</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom n123tcS.</HEALTH>
+        <HEALTH>Kryogenická nemoc. Zaměstnanec BDI. Genom 1Cs42n.</HEALTH>
     </RESULT>
     <RESULT key="Antares">
         <NAME>Antares</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Genom e132n.</HEALTH>
+        <HEALTH>Kryogenická nemoc. Genom e132NcS.</HEALTH>
     </RESULT>
     <RESULT key="Geon">
         <NAME>Geon</NAME>
         <RACE>Exarchos</RACE>
-        <HEALTH>Nobilia. Poskytněte veškerou pomoc! Genom: g3n23tcS</HEALTH>
+        <HEALTH>Nobilia. Poskytněte veškerou pomoc! Genom: g3ex-23tcS.</HEALTH>
     </RESULT>
     <RESULT key="Pleion">
         <NAME>Pleion</NAME>
@@ -203,6 +198,6 @@
     <RESULT key="Togusa">
         <NAME>Togusa</NAME>
         <RACE>Cyborg</RACE>
-        <HEALTH>Nobilia. Poskytněte veškerou pomoc! Genom: n24d.</HEALTH>
+        <HEALTH>Nobilia. Poskytněte veškerou pomoc! Umělá inteligence. Části těla lidské. Kombinace genomů: d34NcS a h72kNcS.</HEALTH>
     </RESULT>
 </RESULTS>
