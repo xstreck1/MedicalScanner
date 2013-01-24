@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <RESULTS>
+    <RESULT key="N">
+        <NAME>NAME</NAME>
+        <RACE>RACE</RACE>
+        <HEALTH>HEALTH</HEALTH>
+    </RESULT>
     <RESULT key="Neodym">
         <NAME>Neodym</NAME>
         <RACE>Sapiens</RACE>
@@ -28,17 +33,17 @@
     <RESULT key="Cortex">
         <NAME>Cortex</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Abnormální hladina stresu. Zaměstnanec BDI.  Genom scx1d43. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI.  Genom scx1d43. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Neuro">
         <NAME>Neuro</NAME>
         <RACE>Sapiens</RACE>
         <HEALTH>Zaměstnanec BDI. Genom x17d43. Symbiont: negativní.</HEALTH>
     </RESULT>
-    <RESULT key="Ali">
+    <RESULT key="N8">
         <NAME>Ali</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom 3n042n. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom 3n001. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Nolan">
         <NAME>Nolan</NAME>
@@ -48,7 +53,7 @@
     <RESULT key="Vega">
         <NAME>Vega</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Rostoucí nádor na mozgu v oblasti prosencephalonu. Zdravotní stav: zhoršující se Zaměstnanec BDI. Genom a24n51. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom a24n51. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Isaac">
         <NAME>Isaac</NAME>
@@ -58,12 +63,12 @@
     <RESULT key="Kane">
         <NAME>Kane</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom a16z5NcS. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom a16z5. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Kvark">
         <NAME>Kvark</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom 277g6NcS. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom 277g46. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Frank">
         <NAME>Frank</NAME>
@@ -73,7 +78,7 @@
     <RESULT key="Tesla">
         <NAME>Tesla</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Jemně zvýšené množství radiace v těle. Zaměstnanec BDI. Genom 1Cs42n. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom 1Cs430. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Dr. Mendel">
         <NAME>Dr. Mendel</NAME>
@@ -83,7 +88,7 @@
     <RESULT key="Acamar">
         <NAME>Acamar</NAME>
         <RACE>Belliger</RACE>
-        <HEALTH>Stopy poškození jater a ledvin, indikující používaní návykových látek v minulosti. Zaměstnanec BDI. Genom gt34NcS. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom gt34N1S. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Kraz">
         <NAME>Kraz</NAME>
@@ -93,52 +98,52 @@
     <RESULT key="Menkab">
         <NAME>Menkab</NAME>
         <RACE>Belliger</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom sC13o42n. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom sC132-N4. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Rana">
         <NAME>Rana</NAME>
         <RACE>Belliger</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom g211t42n. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom g211t4NcS. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Galen">
         <NAME>Galen</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Zaměstnanec BDI, uvědomte vedení o případném zranění. Genom tr13b42n. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom tr134b. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Sargas">
         <NAME>Sargas</NAME>
         <RACE>Belliger</RACE>
-        <HEALTH> Zaměstnanec BDI. Genom n23t42n. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom n23tcS. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Girtab">
         <NAME>Girtab</NAME>
         <RACE>Belliger</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom n1723NcS. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom n1723tcS. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Wei">
         <NAME>Wei</NAME>
         <RACE>Belliger</RACE>
-        <HEALTH>Zaměstnanec BDI. Genom n1n24dcS. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom n143tcS. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Marfik">
         <NAME>Marfik</NAME>
         <RACE>Navarrensis</RACE>
-        <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-B. Implantát: SUB42 a BN16. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-B. Implantát: SUB42, TC 34 a BN16. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Errai">
         <NAME>Errai</NAME>
         <RACE>Navarrensis</RACE>
-        <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-B. Implantát: SUB42 a TC 34. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-B. Implantát: SUB42, TC 34 a BN16. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Deneb">
         <NAME>Deneb</NAME>
         <RACE>Navarrensis</RACE>
-        <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-A. Implantát: SUB42 a TC 34. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Tajné: silná úprava genomu v projektu Genesis. Zaměstnanec BDI nesmí vyzradit. Nesdělujte subjektu. Genom nt346-A. Implantát: SUB42, TC 34 a BN16. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Tachyon">
         <NAME>Tachyon</NAME>
         <RACE>Exarchos</RACE>
-        <HEALTH>Zaměstnanec BDI. Uvědomte vedení o případném zranění subjektu. Poškození mozku způsobené dlouhodobým působením radiace. Částečná amnézie. Genom g3ex-42n. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Uvědomte vedení o případném zranění subjektu a poskytněte veškerou dostupnou pomoc. Genom g3n23tcS.</HEALTH>
     </RESULT>
     <RESULT key="Tahir">
         <NAME>Tahir</NAME>
@@ -148,37 +153,42 @@
     <RESULT key="Izar">
         <NAME>Izar</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Pokusný objekt Z. V případě nalezení doručit L.Cypherovi do sektoru K7453I. Genom blth7NcS. Symbiont: negativní.</HEALTH>
+        <HEALTH>Genom tsr27b. Symbiont: negativní.</HEALTH>
+    </RESULT>
+    <RESULT key="Izar ">
+        <NAME>Izar </NAME>
+        <RACE>Sapiens</RACE>
+        <HEALTH>Genom tsr27b. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Skat">
         <NAME>Skat</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Modifikace regeneračních a imunitních systémů, podporující délku života. Genom 233i6. Symbiont: negativní.</HEALTH>
+        <HEALTH>Genom 233i6. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Almak">
         <NAME>Almak</NAME>
         <RACE>Aquaticus</RACE>
-        <HEALTH>Implantáty neznámého původu. Genom 26-43. Symbiont: negativní.</HEALTH>
+        <HEALTH>Genom 26-43. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Watt">
         <NAME>Watt</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Kryogenická nemoc. Zaměstnanec BDI. Genom 1Cs42n. Symbiont: negativní.</HEALTH>
+        <HEALTH>Zaměstnanec BDI. Genom n123tcS. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Antares">
         <NAME>Antares</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Kryogenická nemoc. Genom e132NcS. Symbiont: negativní.</HEALTH>
+        <HEALTH>Genom e132n. Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Geon">
         <NAME>Geon</NAME>
         <RACE>Exarchos</RACE>
-        <HEALTH>Nobilia. Poskytněte veškerou pomoc! Genom: g3ex-23tcS. Symbiont: negativní.</HEALTH>
+        <HEALTH>Nobilia. Poskytněte veškerou pomoc! Genom: g3n23tcS Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Pleion">
         <NAME>Pleion</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Nobilia. Poskytněte veškerou pomoc! Genom: gi21tcS. Symbiont: negativní.</HEALTH>
+        <HEALTH>Nobilia. Poskytněte veškerou pomoc! Genom: gi21tcS Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Polaris">
         <NAME>Polaris</NAME>
@@ -188,7 +198,7 @@
     <RESULT key="Frame">
         <NAME>Frame</NAME>
         <RACE>Sapiens</RACE>
-        <HEALTH>Genom: fr17-bg4. Symbiont: negativní.</HEALTH>
+        <HEALTH>Genom: fr17-bg4 Symbiont: negativní.</HEALTH>
     </RESULT>
     <RESULT key="Batou">
         <NAME>Batou</NAME>
@@ -198,6 +208,6 @@
     <RESULT key="Togusa">
         <NAME>Togusa</NAME>
         <RACE>Cyborg</RACE>
-        <HEALTH>Nobilia. Poskytněte veškerou pomoc! Umělá inteligence. Části těla lidské. Kombinace genomů: d34NcS a h72kNcS. Symbiont: negativní.</HEALTH>
+        <HEALTH>Nobilia. Poskytněte veškerou pomoc! Genom: n24d. Symbiont: negativní.</HEALTH>
     </RESULT>
 </RESULTS>
