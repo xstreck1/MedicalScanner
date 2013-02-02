@@ -5,42 +5,13 @@
     android:onClick="chooseCalibration"
     android:orientation="vertical"   
     android:keepScreenOn="true" >
-
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/choose_time"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <EditText
-        android:id="@+id/timingField"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:text="@string/basic_timing" >
-
-        <requestFocus />
-    </EditText>
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="40pt"  />
     
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/choose_database"
+        android:minHeight="40pt"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
@@ -55,7 +26,8 @@
     <TextView
         android:id="@+id/TextView02"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0pt"
+        android:layout_weight="1"
         android:minHeight="20pt" />
 
     <Button

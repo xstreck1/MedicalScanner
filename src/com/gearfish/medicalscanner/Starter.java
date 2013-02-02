@@ -57,12 +57,6 @@ public class Starter extends Activity {
 	edit.putBoolean(getString(R.string.calib_pref_name), calibration);
 	edit.apply();
 
-	// Get the time to run and apply it.
-	String time_string = (((EditText) findViewById(R.id.timingField)).getText()).toString();
-	if (Integer.valueOf(time_string) <= 0)
-	    return;
-	receiver.setTime(Integer.valueOf(time_string));
-
 	startActivity(new Intent(this, MainActivity.class));
     }
 
